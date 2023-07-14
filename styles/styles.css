@@ -1,0 +1,64 @@
+.hero-bg-gradient {
+  background: rgb(255, 19, 118);
+  background: linear-gradient(
+    75deg,
+    rgba(255, 19, 118, 0.35) 0%,
+    rgba(151, 71, 255, 0.2) 20%,
+    rgba(150, 212, 149, 0.15) 50%,
+    rgba(255, 204, 74, 0.1) 70%,
+    rgba(255, 204, 74, 0.05) 80%,
+    rgba(151, 71, 255, 0.4) 100%
+  );
+}
+
+.section-bg-gradient {
+  background: rgb(151, 71, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(151, 71, 255, 1) 0%,
+    rgb(104, 17, 218, 0.9) 20%,
+    rgb(104, 17, 218, 1) 50%,
+    rgba(115, 32, 223, 1) 90%
+  );
+}
+
+.resep-bg-gradient {
+  background: rgb(255, 19, 118);
+  background: linear-gradient(
+    75deg,
+    rgba(151, 71, 255, 0.6) 0%,
+    rgba(151, 71, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 204, 74, 0.1) 70%,
+    rgba(255, 204, 74, 0.4) 100%
+  );
+}
+
+.big-card-bg-gradient {
+  background: rgb(169, 103, 254);
+  background: linear-gradient(
+    337deg,
+    rgba(169, 103, 254, 1) 0%,
+    rgba(113, 15, 242, 1) 60%,
+    rgba(113, 23, 230, 0.9) 70%,
+    rgb(136, 70, 223) 100%
+  );
+}
+
+.card-bg-gradient-orange {
+  background: rgb(255, 163, 19);
+  background: linear-gradient(
+    221deg,
+    rgba(255, 163, 19, 1) 0%,
+    rgba(255, 104, 19, 1) 80%
+  );
+}
+
+.card-bg-gradient-purple {
+  background: rgb(115, 33, 235);
+  background: linear-gradient(
+    157deg,
+    rgba(115, 33, 235, 1) 0%,
+    rgba(73, 31, 193, 1) 80%
+  );
+}

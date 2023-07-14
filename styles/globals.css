@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply flex min-h-full flex-col bg-white p-8 rounded-md justify-between items-center shadow-lg;
+}
+
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}

@@ -5,11 +5,13 @@ import ReasonCard from "@/components/reason-card";
 import Emoticon from "@/components/emoticon";
 import Accordion from "@/components/accordion";
 import logoWhite from "@/public/logo-white.png";
+import logo from "@/public/logo.png";
 import GamesCard from "@/components/games-card";
 import heroImg from "@/public/images/hero-image.png";
 import chart from "@/public/images/chart.png";
 import Company from "@/components/company";
 import ExpertCard from "@/components/expert-card";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
         <div className="flex-row">
           <div className="container flex-row lg:flex items-start justify-start">
             <div className="flex flex-col">
-              <h1 className="uppercase leading-[0.9] tracking-wide text-[5rem] md:text-[5.5rem] font-['Bebas_Neue'] font-bold mb-5 text-white">
+              <h1 className="uppercase leading-[0.9] tracking-wide text-[4rem] md:text-[5.5rem] font-['Bebas_Neue'] font-bold mb-5 text-white">
                 <span className="text-orange">harness your</span> <br />{" "}
                 team&apos;s true <br /> potential
               </h1>
@@ -27,7 +29,7 @@ export default function Home() {
                 aktivitas yang asik, beda, dan insightful
               </p>
               <div className="mb-[3rem]">
-                <Link href="/" className="btn-orange">
+                <Link href="/" target="_blank" className="btn-orange">
                   Selengkapnya
                 </Link>
               </div>
@@ -43,7 +45,7 @@ export default function Home() {
 
       <section className="space-y-6 bg-[#fff8e9] pt-[6rem]">
         <div className="container flex-row justify-center items-center pb-[3rem]">
-          <h2 className="text-center text-3xl md:text-4xl font-bold mb-5 md:max-w-[60%] mx-auto">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-5 md:max-w-[60%] mx-auto">
             Sebagai seorang manager{" "}
             <span className="text-darkOrange">
               apakah Anda pernah merasakan hal ini?
@@ -56,8 +58,8 @@ export default function Home() {
 
         <div className="container pb-[6rem]">
           <div className="big-card max-w-fit mx-auto">
-            <div>
-              <h2 className="text-center text-2xl md:text-3xl font-bold mb-5 mx-auto">
+            <div className="flex flex-col w-[300px] md:w-auto">
+              <h2 className="text-center text-xl md:text-3xl font-bold mb-5 mx-auto">
                 Faktanya... <br /> Anda tidak sendirian.{" "}
               </h2>
               <p className="text-center mb-10 ">
@@ -103,7 +105,7 @@ export default function Home() {
                 building anda makin efektif dan berkesan.
               </p>
               <div>
-                <Link href="#" className="btn-orange">
+                <Link href="#" target="_blank" className="btn-orange">
                   Konsultasi Sekarang
                 </Link>
               </div>
@@ -137,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 py-[8rem]">
         <div className="container flex-row justify-center items-center">
           <h3 className="text-center text-xl font-medium">
             Telah dipercaya 500+ perusahaan di berbagai industri
@@ -148,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 py-[4rem]">
         <div className="container justify-center items-center">
           <p className="text-center text-lg mb-2 ">
             Bertemu ahli di setiap bidang
@@ -157,6 +159,28 @@ export default function Home() {
             Para ahli yang akan menemani Anda bermain dan berakselerasi bersama
           </h2>
           <ExpertCard />
+        </div>
+      </section>
+
+      <section className="space-y-6 py-[5rem]">
+        <div className="container justify-center items-center">
+          <Image src={logo} alt="logo" className="w-[150px] mx-auto mb-5" />
+          <h2 className="text-center text-3xl md:text-4xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
+            Siap untuk bermain bersama Squadgames?
+          </h2>
+          <p className="text-center text-base font-light mb-2 mx-auto md:w-[70%] lg:w-[50%]">
+            Tingkatkan performa tim Anda lewat training yang menyenangkan dengan
+            berbagai games dari Squadgames.
+          </p>
+
+          <div className="flex justify-center mt-[2rem]">
+            <Link href="#" target="_blank" className="btn-md-orange">
+              <span className="text-white text-xl mr-2">
+                <IoLogoWhatsapp />
+              </span>
+              WhatsApp Kami
+            </Link>
+          </div>
         </div>
       </section>
     </>

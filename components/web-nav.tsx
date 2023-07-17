@@ -36,7 +36,7 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
           <p className="text-center">
             Dapatkan diskon untuk video training soft skill pengembangan diri
             sekarang!{" "}
-            <Link href="/" className="btn-sm-purple">
+            <Link href="#" target="_blank" className="btn-sm-purple">
               Lihat info
             </Link>
           </p>

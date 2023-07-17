@@ -55,16 +55,17 @@ const ExpertCard = () => {
               <p className="">{expert.desc}</p>
             </div>
 
-            <div className=" flex mx-auto py-1 text-white">
+            <div className=" flex mx-auto py-2 text-white">
               <Link
                 href={expert.link}
+                target="_blank"
                 className="flex justify-center mx-auto items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
               >
                 <span>
                   <BsLinkedin />
                 </span>
-                Lihat Profil{" "}
-                <span className="text-3xl">
+                <span className="hover:underline">Lihat Profil </span>
+                <span className="text-xl">
                   <HiArrowLongRight />
                 </span>
               </Link>

@@ -19,7 +19,7 @@
 }
 
 .btn-md {
-  @apply inline-flex justify-center items-center py-2 px-6 rounded-md cursor-pointer transition ease-out duration-200 font-medium text-base shadow-md;
+  @apply inline-flex justify-center items-center py-2 px-5 rounded-md cursor-pointer transition ease-out duration-200 font-medium text-base shadow-md;
 }
 
 .btn-orange {

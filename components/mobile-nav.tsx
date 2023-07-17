@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { WebNavItem } from "@/types";
 
 interface MobileNavProps {

@@ -1,7 +1,7 @@
 export const webNavConfig = [
   {
-    title: "Program",
-    href: "/program",
+    title: "Training",
+    href: "/training",
   },
   {
     title: "Harga",

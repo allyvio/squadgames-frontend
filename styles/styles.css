@@ -1,13 +1,12 @@
-.hero-bg-gradient {
-  background: rgb(255, 19, 118);
+.bg-hero-gradient {
+  background: rgb(171, 112, 248);
   background: linear-gradient(
-    75deg,
-    rgba(255, 19, 118, 0.35) 0%,
-    rgba(151, 71, 255, 0.2) 20%,
-    rgba(150, 212, 149, 0.15) 50%,
-    rgba(255, 204, 74, 0.1) 70%,
-    rgba(255, 204, 74, 0.05) 80%,
-    rgba(151, 71, 255, 0.4) 100%
+    337deg,
+    rgb(99, 14, 210) 0%,
+    rgb(157, 104, 227) 30%,
+    rgb(131, 58, 226) 60%,
+    rgba(121, 41, 226, 0.85) 60%,
+    rgb(98, 17, 205) 100%
   );
 }
 
@@ -17,8 +16,9 @@
     0deg,
     rgba(151, 71, 255, 1) 0%,
     rgb(104, 17, 218, 0.9) 20%,
-    rgb(104, 17, 218, 1) 50%,
-    rgba(115, 32, 223, 1) 90%
+    rgb(111, 37, 206) 40%,
+    rgb(91, 8, 200) 70%,
+    rgba(115, 32, 223, 1) 100%
   );
 }
 
@@ -35,13 +35,14 @@
 }
 
 .big-card-bg-gradient {
-  background: rgb(169, 103, 254);
+  background: rgb(171, 112, 248);
   background: linear-gradient(
-    337deg,
-    rgba(169, 103, 254, 1) 0%,
-    rgba(113, 15, 242, 1) 60%,
-    rgba(113, 23, 230, 0.9) 70%,
-    rgb(136, 70, 223) 100%
+    45deg,
+    rgb(85, 2, 193) 0%,
+    rgb(137, 77, 215) 30%,
+    rgb(115, 39, 214) 60%,
+    rgba(99, 10, 216, 0.85) 60%,
+    rgb(75, 9, 161) 100%
   );
 }
 
@@ -58,7 +59,49 @@
   background: rgb(115, 33, 235);
   background: linear-gradient(
     157deg,
-    rgba(115, 33, 235, 1) 0%,
-    rgba(73, 31, 193, 1) 80%
+    rgb(88, 0, 219) 20%,
+    rgb(51, 45, 181) 100%
   );
+}
+
+.bg-games-gradient {
+  background: rgb(255, 146, 19);
+  background: linear-gradient(
+    337deg,
+    rgb(229, 71, 3) 0%,
+    rgba(242, 137, 31, 0.85) 30%,
+    rgba(250, 142, 34, 0.85) 60%,
+    rgba(251, 150, 49, 0.85) 60%,
+    rgb(229, 71, 3) 100%
+  );
+}
+
+.web-nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  text-align: center;
+  background-color: white;
+  border-bottom: solid 1px rgb(204, 204, 204);
+  transition: transform 200ms ease-in-out;
+}
+
+.web-nav.nav--hidden {
+  transform: translateY(-100%);
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffefd4;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: solid 1px rgb(225, 225, 225);
 }

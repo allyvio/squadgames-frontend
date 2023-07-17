@@ -4,19 +4,17 @@ export type SiteConfig = {
   url: string;
   ogImage: string;
   links: {
-    twitter: string;
-    github: string;
+    instagram: string;
   };
 };
 
 export const siteConfig: SiteConfig = {
   name: "Squadgames",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
-  url: "https://tx.shadcn.com",
-  ogImage: "https://tx.shadcn.com/og.jpg",
+    "Solusi end-to-end untuk mengembangkan tim anda lewat berbagai aktivitas yang asik, beda, dan insightful",
+  url: "https://squadgames.id",
+  ogImage: "",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/taxonomy",
+    instagram: "https://instagram.com/squadgames.id",
   },
 };

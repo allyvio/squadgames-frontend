@@ -10,9 +10,11 @@ module.exports = {
       colors: {
         purple: "#9747FF",
         darkPurple: "#8A40F5",
+        darkPurple2: "#7D25F0",
         blue: "#491FC1",
         orange: "#FFA313",
-        darkOrange: "#FF6813",
+        lightOrange: "#FFC866",
+        darkOrange: "#FF6F00",
         pink: "#FFB1D2",
         green: "#96D495",
         yellow: "#FFCC4A",
@@ -22,7 +24,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1300px",
+        "2xl": "1260px",
       },
       fontFamily: {
         sans: ["ui-sans-serif", "system-ui"],

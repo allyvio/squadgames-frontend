@@ -1,10 +1,13 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { WebNavItem } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../public/logo.png";
+import useScrollListener from "@/hooks/useScroll";
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
+import MobileNav from "./mobile-nav";
 
 interface WebNavProps {
   items?: WebNavItem[];
@@ -12,51 +15,70 @@ interface WebNavProps {
 }
 
 const WebNav: FC<WebNavProps> = ({ items, children }) => {
-  const [navbar, setNavbar] = useState<boolean>(false);
+  const [navClassList, setNavClassList] = useState([]);
+  const scroll = useScrollListener();
+  const [showInfo, setShowInfo] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
-  const changeColor = () => {
-    if (window.scrollY > 80) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
+  useEffect(() => {
+    const _classList = [];
+    if (scroll.y > 250 && scroll.y - scroll.lastY > 0) {
+      _classList.push("nav--hidden");
     }
-  };
 
-  window.addEventListener("scroll", changeColor);
+    setNavClassList(_classList);
+  }, [scroll.y, scroll.lastY]);
 
   return (
-    <header
-      className={`z-40 fixed w-full bg-white border-b border-gray-300 transition-all ease-in-out duration-200 ${
-        navbar ? "py-[12px]" : " pb-[17px] pt-[60px]"
-      }`}
-    >
-      <div
-        className={`${
-          navbar ? "hidden" : "absolute"
-        } bg-slate-100 z-41 top-0 w-full mx-auto text-center py-2 border-b border-gray-200`}
-      >
-        <p className="">
-          Dapatkan video training soft skill pengembangan diri di{" "}
-          <span className="text-darkOrange cursor-pointer">sini</span>
-        </p>
-      </div>
-      <div
-        className={`container flex justify-between items-center transition ease-in-out duration-300 `}
-      >
-        <Link href="/" className="flex">
-          <Image src="/logo.png" alt="squadgames" width={180} height={50} />
-        </Link>
-        {items?.length ? (
-          <nav className="flex gap-6">
-            {items?.map((item, index) => (
-              <Link key={index} href={item.disabled ? "#" : item.href}>
-                {item.title}
-              </Link>
-            ))}
-          </nav>
-        ) : null}
-      </div>
-    </header>
+    <>
+      {showInfo && (
+        <div className="info">
+          <p className="text-center">
+            Dapatkan diskon untuk video training soft skill pengembangan diri
+            sekarang!{" "}
+            <Link href="/" className="btn-sm-purple">
+              Lihat info
+            </Link>
+          </p>
+
+          <button
+            onClick={() => setShowInfo(false)}
+            className="absolute right-5 top-10 sm:top-4 text-black"
+          >
+            x
+          </button>
+        </div>
+      )}
+      <header className={`web-nav ${!showNav ? navClassList.join(" ") : null}`}>
+        <div className={`container flex justify-between items-center`}>
+          <Link href="/" className="flex">
+            <Image src="/logo.png" alt="squadgames" width={150} height={50} />
+          </Link>
+          {items?.length ? (
+            <nav className="hidden md:flex gap-6 ">
+              {items?.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.disabled ? "#" : item.href}
+                  className="py-2 px-3 hover:text-darkPurple"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </nav>
+          ) : null}
+          <div className="bg-transparent w-10 h-10 flex justify-center items-center">
+            <button
+              className="text-darkPurple text-2xl p-2 md:hidden"
+              onClick={() => setShowNav(!showNav)}
+            >
+              {showNav ? <AiOutlineClose /> : <FiMenu />}
+            </button>
+          </div>
+        </div>
+        {showNav && <MobileNav items={items} />}
+      </header>
+    </>
   );
 };
 

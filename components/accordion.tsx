@@ -30,16 +30,10 @@ const AccordionSection: FC<AccordionProps> = ({
     setActiveIndex(nextIndex);
   };
   return (
-    <div
-      className={`${
-        sectionIndex === 1 || sectionIndex === 2
-          ? "card-bg-gradient-orange"
-          : "card-bg-gradient-purple"
-      } flex flex-col rounded-lg shadow-lg`}
-    >
+    <div className="bg-blue flex flex-col rounded-2xl shadow-xl">
       <div
         onClick={() => toggleSection()}
-        className={`flex items-center cursor-pointer px-3 md:px-6 py-5 
+        className={`flex items-center cursor-pointer px-3 md:px-6 py-3 
         rounded-lg gap-5
        `}
       >
@@ -48,8 +42,10 @@ const AccordionSection: FC<AccordionProps> = ({
           alt="icon"
           className="w-[30px] md:w-[50px] h-[30px] md:h-[50px]"
         />
-        <h3 className="uppercase text-white font-bold">{section.title}</h3>
-        <div className="text-5xl text-white ml-auto">
+        <h3 className="uppercase text-white font-bold text-xl">
+          {section.title}
+        </h3>
+        <div className="text-4xl md:text-5xl text-white ml-auto">
           {isActiveSection ? (
             <MdOutlineKeyboardArrowUp />
           ) : (
@@ -58,7 +54,7 @@ const AccordionSection: FC<AccordionProps> = ({
         </div>
       </div>
       <Collapse isOpened={isActiveSection}>
-        <div className={`px-5 md:px-8 pb-5 rounded-b-lg`}>
+        <div className={`px-5 md:px-[6rem] pb-5 pt-1 rounded-b-lg text-lg`}>
           <p className="text-white">{section.desc}</p>
         </div>
       </Collapse>

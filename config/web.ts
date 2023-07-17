@@ -1,10 +1,14 @@
 export const webNavConfig = [
   {
-    title: "Home",
-    href: "/",
+    title: "Program",
+    href: "/program",
   },
   {
-    title: "Our Catalogue",
-    href: "/catalogue",
+    title: "Harga",
+    href: "/harga",
+  },
+  {
+    title: "Hubungi Kami",
+    href: "/hubungi-kami",
   },
 ];

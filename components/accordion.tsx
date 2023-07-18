@@ -30,11 +30,11 @@ const AccordionSection: FC<AccordionProps> = ({
     setActiveIndex(nextIndex);
   };
   return (
-    <div className="bg-blue flex flex-col rounded-2xl shadow-xl">
+    <div className="bg-blue flex flex-col rounded-md shadow-xl">
       <div
         onClick={() => toggleSection()}
         className={`flex items-center cursor-pointer px-3 md:px-6 py-3 
-        rounded-lg gap-5
+        gap-5
        `}
       >
         <Image
@@ -54,7 +54,7 @@ const AccordionSection: FC<AccordionProps> = ({
         </div>
       </div>
       <Collapse isOpened={isActiveSection}>
-        <div className={`px-5 md:px-[6rem] pb-5 pt-1 rounded-b-lg text-lg`}>
+        <div className={`px-5 md:px-[6rem] pb-5 pt-1 text-lg`}>
           <p className="text-white">{section.desc}</p>
         </div>
       </Collapse>

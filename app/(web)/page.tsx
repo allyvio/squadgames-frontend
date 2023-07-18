@@ -21,9 +21,9 @@ export default function Home() {
         <div className="flex-row">
           <div className="container flex-row lg:flex items-start justify-start">
             <div className="flex flex-col">
-              <h1 className="uppercase leading-[0.9] tracking-wide text-[4rem] md:text-[5.5rem] font-['Bebas_Neue'] font-bold mb-5 text-white">
-                <span className="text-orange">harness your</span> <br />{" "}
-                team&apos;s true <br /> potential
+              <h1 className="leading-[0.9] tracking-tighter text-[4rem] md:text-[5rem] font-bold mb-5 text-white">
+                <span className="text-orange">Harness Your</span> <br />{" "}
+                Team&apos;s True <br /> Potential
               </h1>
               <p className="mb-5 max-w-[85%] text-white">
                 Solusi end-to-end untuk mengembangkan tim anda lewat berbagai
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       <section className="space-y-6 py-[4rem] big-card-bg-gradient">
-        <div className="container pb-[3rem] text-white">
+        <div className="container md:pb-[3rem] text-white">
           <p className="text-center text-lg mb-2">Solusi dari Squadgames</p>
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[65%]">
             Squadgames will help you create team building events{" "}
@@ -94,7 +94,7 @@ export default function Home() {
 
         <section className="container flex justify-center items-center lg:px-[3rem] ">
           <div className="grid grid-cols-1 lg:grid-cols-2 content-between gap-10">
-            <div className="flex flex-col w-[90%]">
+            <div className="flex flex-col md:w-[90%]">
               <Image
                 src={logoWhite}
                 alt="squadgames"
@@ -144,9 +144,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[8rem]">
+      <section className="space-y-6 pt-[8rem] pb-[5rem]">
         <div className="container flex-row justify-center items-center">
-          <h3 className="text-center text-xl font-medium">
+          <h3 className="text-center text-lg md:text-xl font-medium">
             Telah dipercaya 500+ perusahaan di berbagai industri
           </h3>
         </div>
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 py-[3rem] mb-[1rem]">
         <div className="container">
           <Image src={logo} alt="logo" className="w-[150px] mx-auto mb-5" />
           <h2 className="text-center text-3xl md:text-4xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">

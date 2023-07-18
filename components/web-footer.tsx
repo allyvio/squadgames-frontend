@@ -25,6 +25,7 @@ const WebFooter = () => {
                 <div key={i} className="flex flex-col">
                   <Link
                     href={`${item.link}`}
+                    target={`${item.blank ? "_blank" : "_self"}`}
                     className="hover:text-orange md:mt-[3px]"
                   >
                     {item.name} <span className="text-orange">{item.add}</span>

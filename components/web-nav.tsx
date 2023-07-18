@@ -20,14 +20,14 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
   const [showInfo, setShowInfo] = useState(true);
   const [showNav, setShowNav] = useState(false);
 
-  useEffect(() => {
-    const _classList = [];
-    if (scroll.y > 250 && scroll.y - scroll.lastY > 0) {
-      _classList.push("nav--hidden");
-    }
+  // useEffect(() => {
+  //   const _classList = [];
+  //   if (scroll.y > 250 && scroll.y - scroll.lastY > 0) {
+  //     _classList.push("nav--hidden");
+  //   }
 
-    setNavClassList(_classList);
-  }, [scroll.y, scroll.lastY]);
+  //   setNavClassList(_classList);
+  // }, [scroll.y, scroll.lastY]);
 
   return (
     <>

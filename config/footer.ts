@@ -5,10 +5,12 @@ export const footerData = [
       {
         name: "Dukungan purna jual",
         link: "/dukungan-purna-jual",
+        blank: false,
       },
       {
         name: "Klien kami",
         link: "/klien-kami",
+        blank: false,
       },
     ],
   },
@@ -18,26 +20,32 @@ export const footerData = [
       {
         name: "Softskill training",
         link: "/training",
+        blank: false,
       },
       {
         name: "In venue team building",
         link: "/training",
+        blank: false,
       },
       {
         name: "Team building in city",
         link: "/training",
+        blank: false,
       },
       {
         name: "Corporate event",
         link: "/training",
+        blank: false,
       },
       {
         name: "Family gathering",
         link: "/training",
+        blank: false,
       },
       {
         name: "Retirement preparation",
         link: "/training",
+        blank: false,
       },
     ],
   },
@@ -47,14 +55,17 @@ export const footerData = [
       {
         name: "Peopleshift",
         link: "https://peopleshift.id",
+        blank: true,
       },
       {
         name: "Shiftacademy",
         link: "https://shiftacademy.id",
+        blank: true,
       },
       {
         name: "Squadgames",
         link: "https://squadgames.id",
+        blank: true,
       },
     ],
   },
@@ -64,19 +75,23 @@ export const footerData = [
       {
         name: "Tentang Squadgames",
         link: "/tentang-squadgames",
+        blank: false,
       },
       {
         name: "Hubungi kami",
         link: "/hubungi-kami",
+        blank: true,
       },
       {
         name: "Blog",
         link: "/blog",
+        blank: true,
       },
       {
         name: "Karir",
         add: " - We're Hiring!",
-        link: "/karir",
+        link: "https://linkedin.com",
+        blank: true,
       },
     ],
   },

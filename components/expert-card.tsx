@@ -20,7 +20,7 @@ const ExpertCard = () => {
       slidesPerView={1}
       // navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
       breakpoints={{
         768: {
           slidesPerView: 2,

@@ -8,6 +8,7 @@ import useScrollListener from "@/hooks/useScroll";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import MobileNav from "./mobile-nav";
+import logo from "@/public/logo.png";
 
 interface WebNavProps {
   items?: WebNavItem[];
@@ -52,14 +53,15 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
       <header className={`web-nav ${!showNav ? navClassList.join(" ") : null}`}>
         <div className={`container flex justify-between items-center`}>
           <Link href="/" className="flex">
-            <Image src="/logo.png" alt="squadgames" width={125} height={50} />
+            <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
           </Link>
           {items?.length ? (
             <nav className="hidden md:flex gap-6 ">
               {items?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.disabled ? "#" : item.href}
+                  href={item.href}
+                  target={`${item.blank && "_blank"}`}
                   className="py-2 px-3 hover:text-darkPurple"
                 >
                   {item.title}

@@ -110,7 +110,11 @@ export default function Home() {
                 delectus.
               </p>
               <div>
-                <Link href="#" target="_blank" className="btn-orange">
+                <Link
+                  href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
+                  target="_blank"
+                  className="btn-orange"
+                >
                   Konsultasi Sekarang
                 </Link>
               </div>
@@ -185,7 +189,11 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center mt-[2rem]">
-            <Link href="#" target="_blank" className="btn-md-orange">
+            <Link
+              href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
+              target="_blank"
+              className="btn-md-orange"
+            >
               <span className="text-white text-xl mr-2">
                 <IoLogoWhatsapp />
               </span>

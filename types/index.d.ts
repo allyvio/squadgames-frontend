@@ -1,7 +1,7 @@
 export type WebNavItem = {
   title: string;
   href: string;
-  disabled?: boolean;
+  blank: boolean;
 };
 
 export type AccordionConfig = {

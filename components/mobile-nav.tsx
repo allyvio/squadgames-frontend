@@ -16,7 +16,8 @@ const MobileNav: FC<MobileNavProps> = ({ items }) => {
           {items?.map((item, index) => (
             <Link
               key={index}
-              href={item.disabled ? "#" : item.href}
+              href={item.href}
+              target={`${item.blank && "_blank"}`}
               className={`flex items-center my-0 mx-auto w-full py-3 border-b border-[#ddd] ${
                 index === 0 && "border-t"
               }`}

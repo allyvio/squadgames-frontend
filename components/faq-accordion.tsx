@@ -46,7 +46,7 @@ const AccordionSection: FC<AccordionProps> = ({
       </div>
 
       <Collapse isOpened={isActiveSection}>
-        <div className="pl-5 pr-[5rem] pb-5 rounded-b-lg">
+        <div className="pl-5 pr-[3rem] md:pr-[5rem] pb-5 rounded-b-lg">
           <p className="">{section.answer}</p>
         </div>
       </Collapse>

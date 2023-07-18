@@ -13,6 +13,7 @@ import Company from "@/components/company";
 import ExpertCard from "@/components/expert-card";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Faq from "@/components/faq";
+import Program from "@/components/program";
 
 export default function Home() {
   return (
@@ -148,7 +149,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 pt-[8rem] pb-[5rem]">
+      {/* program training goes here */}
+
+      <section className="space-y-6 pt-[6rem] pb-[4rem]">
+        <div className="container flex-row justify-center items-center">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
+            Team Building Program
+          </h2>
+          <Program />
+        </div>
+      </section>
+
+      <section className="space-y-6 py-[5rem]">
         <div className="container flex-row justify-center items-center">
           <h3 className="text-center text-lg md:text-xl font-medium">
             Telah dipercaya 500+ perusahaan di berbagai industri

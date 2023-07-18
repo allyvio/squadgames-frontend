@@ -18,16 +18,16 @@ const WebFooter = () => {
           <Image src={logoWhite} alt="squadgames" className="w-[200px]" />
         </div>
         <div className="flex flex-col md:flex-row">
-          {footerData.map((footer, i) => (
+          {footerData?.map((data, i) => (
             <div key={i} className="flex flex-col mr-[3rem] mb-[1rem]">
-              <h4 className="mb-1 md:mb-3 font-extrabold">{footer.title}</h4>
-              {footer.items.map((item, i) => (
+              <h4 className="mb-1 md:mb-3 font-extrabold">{data.title}</h4>
+              {data?.items?.map((item, i) => (
                 <div key={i} className="flex flex-col">
                   <Link
                     href={`${item.link}`}
-                    className="hover:text-orange mt-[3px]"
+                    className="hover:text-orange md:mt-[3px]"
                   >
-                    {item.name}
+                    {item.name} <span className="text-orange">{item.add}</span>
                   </Link>
                 </div>
               ))}

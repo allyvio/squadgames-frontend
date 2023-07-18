@@ -12,6 +12,7 @@ import chart from "@/public/images/chart.png";
 import Company from "@/components/company";
 import ExpertCard from "@/components/expert-card";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Faq from "@/components/faq";
 
 export default function Home() {
   return (
@@ -100,9 +101,13 @@ export default function Home() {
                 className="max-w-[250px] my-5"
               />
               <p className="text-lg text-white mb-10">
-                Squadgames will help you create teambuilding event like never
-                before! Perpaduan 4 bahan terbaik untuk menjadikan event team
-                building anda makin efektif dan berkesan.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae beatae quod dolorum tenetur impedit quo, excepturi,
+                inventore animi blanditiis nesciunt saepe possimus consectetur
+                iure dicta maiores commodi. Maiores iure illum veniam ipsa quae
+                soluta. Eius architecto beatae natus, maxime facere consequuntur
+                magni nemo, numquam, libero quaerat eligendi deleniti earum
+                delectus.
               </p>
               <div>
                 <Link href="#" target="_blank" className="btn-orange">
@@ -150,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[4rem]">
+      <section className="space-y-6 py-[3rem]">
         <div className="container justify-center items-center">
           <p className="text-center text-lg mb-2 ">
             Bertemu ahli di setiap bidang
@@ -163,7 +168,13 @@ export default function Home() {
       </section>
 
       <section className="space-y-6 py-[5rem]">
-        <div className="container justify-center items-center">
+        <div className="container">
+          <Faq />
+        </div>
+      </section>
+
+      <section className="space-y-6 py-[5rem]">
+        <div className="container">
           <Image src={logo} alt="logo" className="w-[150px] mx-auto mb-5" />
           <h2 className="text-center text-3xl md:text-4xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
             Siap untuk bermain bersama Squadgames?

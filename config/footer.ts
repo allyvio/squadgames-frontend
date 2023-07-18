@@ -75,6 +75,7 @@ export const footerData = [
       },
       {
         name: "Karir",
+        add: " - We're Hiring!",
         link: "/karir",
       },
     ],

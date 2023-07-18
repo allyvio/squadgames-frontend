@@ -52,7 +52,7 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
       <header className={`web-nav ${!showNav ? navClassList.join(" ") : null}`}>
         <div className={`container flex justify-between items-center`}>
           <Link href="/" className="flex">
-            <Image src="/logo.png" alt="squadgames" width={150} height={50} />
+            <Image src="/logo.png" alt="squadgames" width={125} height={50} />
           </Link>
           {items?.length ? (
             <nav className="hidden md:flex gap-6 ">

@@ -65,7 +65,7 @@ const ExpertCard = () => {
                   <BsLinkedin />
                 </span>
                 <span className="hover:underline">Lihat Profil </span>
-                <span className="text-xl">
+                <span className="text-lg scale-x-150">
                   <HiArrowLongRight />
                 </span>
               </Link>

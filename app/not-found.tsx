@@ -1,9 +1,6 @@
 "use client";
-import { useRouter } from "next/navigation";
 
 export default function NotFound() {
-  const router = useRouter();
-
   return (
     <div className="flex h-screen overflow-auto bg-darkPurple text-white">
       <div className="flex flex-col mx-auto items-center justify-center px-4">
@@ -12,12 +9,12 @@ export default function NotFound() {
           Sorry.. We searched high and low but couldn&apos;t find what
           you&apos;re looking for. Let&apos;s find a better place for you to go.
         </p>
-        <button
-          onClick={() => router.back()}
+        <a
+          href="/"
           className="btn-md-orange px-3 text-white hover:bg-grey mt-5"
         >
-          Go back
-        </button>
+          Back to home
+        </a>
       </div>
     </div>
   );

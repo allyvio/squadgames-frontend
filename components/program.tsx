@@ -67,7 +67,7 @@ const Program = () => {
                   <Image
                     src={pic4}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>
@@ -101,7 +101,7 @@ const Program = () => {
                   <Image
                     src={pic2}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>
@@ -135,7 +135,7 @@ const Program = () => {
                   <Image
                     src={pic3}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>
@@ -169,7 +169,7 @@ const Program = () => {
                   <Image
                     src={pic4}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>
@@ -203,7 +203,7 @@ const Program = () => {
                   <Image
                     src={pic2}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>
@@ -237,7 +237,7 @@ const Program = () => {
                   <Image
                     src={pic4}
                     alt="image"
-                    className="object-cover w-full h-72 rounded-md"
+                    className="object-cover w-full h-56 md:h-72 rounded-md"
                   />
                 </div>
               </Tab.Panel>

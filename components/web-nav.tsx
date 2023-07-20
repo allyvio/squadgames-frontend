@@ -61,7 +61,7 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
                 <Link
                   key={index}
                   href={item.href}
-                  target={`${item.blank && "_blank"}`}
+                  target={`${item.blank ? "_blank" : "_self"}`}
                   className="py-2 px-3 hover:text-darkPurple"
                 >
                   {item.title}

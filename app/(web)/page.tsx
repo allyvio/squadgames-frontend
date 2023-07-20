@@ -149,18 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* program training goes here */}
-
-      <section className="space-y-6 pt-[6rem] pb-[4rem]">
-        <div className="container flex-row justify-center items-center">
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
-            Team Building Program
-          </h2>
-          <Program />
-        </div>
-      </section>
-
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 py-[6rem]">
         <div className="container flex-row justify-center items-center">
           <h3 className="text-center text-lg md:text-xl font-medium">
             Telah dipercaya 500+ perusahaan di berbagai industri
@@ -171,19 +160,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[3rem]">
+      {/* program training goes here */}
+
+      <section className="space-y-6 pt-[2rem] pb-[4rem]">
+        <div className="container flex-row justify-center items-center">
+          <p className="text-center text-lg mb-2 ">Program Team Building</p>
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
+            Pilih program yang sesuai dengan kebutuhan Anda
+          </h2>
+          <Program />
+        </div>
+      </section>
+
+      <section className="space-y-6 pt-[5rem] pb-[3rem]">
         <div className="container justify-center items-center">
           <p className="text-center text-lg mb-2 ">
             Bertemu ahli di setiap bidang
           </p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[5rem] mx-auto md:max-w-[70%] ">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
             Para ahli yang akan menemani Anda bermain dan berakselerasi bersama
           </h2>
           <ExpertCard />
         </div>
       </section>
 
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 py-[4rem]">
         <div className="container">
           <Faq />
         </div>

@@ -20,7 +20,8 @@ const Program = () => {
               {data?.tabs?.map((tab, i) => (
                 <Tab
                   key={i}
-                  className="border-b  ui-selected:border-b-darkPurple md:ui-selected:bg-darkPurple md:ui-selected:text-white ui-not-selected:text-black flex p-3 mr-3 md:mr-[3rem] outline-none md:rounded"
+                  className="border-b  ui-selected:border-b-darkPurple 
+                  ui-selected:border-b-2 md:ui-selected:bg-darkPurple md:ui-selected:text-white ui-not-selected:text-black flex p-3 mr-3 md:mr-[3rem] outline-none md:rounded"
                 >
                   {tab}
                 </Tab>
@@ -46,7 +47,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link
@@ -81,7 +82,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link
@@ -115,7 +116,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link
@@ -149,7 +150,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link
@@ -183,7 +184,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link
@@ -217,7 +218,7 @@ const Program = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quia similique laudantium praesentium. Optio, consectetur
                     sequi delectus quisquam minus consequatur ea exercitationem,
-                    at sint commodi id sapiente earum eligendi quae enim?
+                    at sint commodi id sapiente earum eligendi quae...
                   </p>
                   <div className="text-darkPurple">
                     <Link

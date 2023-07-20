@@ -7,7 +7,7 @@
 }
 
 .big-card {
-  @apply flex flex-col lg:flex-row bg-[#fff] px-[5rem] py-[4rem] rounded-3xl justify-center items-center shadow-xl gap-10;
+  @apply flex flex-col lg:flex-row bg-[#fff] px-[5rem] py-[2rem] md:py-[4rem] rounded-3xl justify-center items-center shadow-xl gap-10;
 }
 
 .btn {
@@ -36,4 +36,20 @@
 
 .btn-md-orange {
   @apply btn-md bg-darkOrange text-white hover:bg-[#F65A00];
+}
+
+.info {
+  @apply flex gap-[10px] justify-center items-center bg-white w-full my-auto text-center p-[1rem] border-b border-[#ededed];
+}
+
+.web-nav {
+  @apply py-[7px] sticky z-40 top-0 text-center bg-white;
+}
+
+.web-header {
+  @apply sticky z-40 top-0 text-center bg-white transition-transform ease-in-out duration-300 md:duration-700;
+}
+
+.web-header.info--hidden {
+  @apply translate-y-[-60%]  md:translate-y-[-52%] border-b border-[#ddd];
 }

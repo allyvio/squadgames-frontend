@@ -45,9 +45,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 bg-[#fff8e9] pt-[6rem]">
-        <div className="container flex-row justify-center items-center pb-[3rem]">
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-5 md:max-w-[60%] mx-auto">
+      <section className="space-y-6 bg-[#fff8e9] pt-[3rem] md:pt-[5rem]">
+        <div className="container flex-row justify-center items-center pb-[1rem] md:pb-[2rem]">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 md:mb-0 md:max-w-[60%] mx-auto">
             Sebagai seorang manager{" "}
             <span className="text-darkOrange">
               apakah Anda pernah merasakan hal ini?
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container pb-[6rem]">
+        <div className="container pb-[4rem] md:pb-[6rem]">
           <div className="big-card max-w-fit mx-auto">
             <div className="flex flex-col w-[300px] md:w-auto">
               <h2 className="text-center text-xl md:text-3xl font-bold mb-5 mx-auto">
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[4rem] big-card-bg-gradient">
+      <section className="space-y-6 py-[3rem] md:py-[4rem] big-card-bg-gradient">
         <div className="container md:pb-[3rem] text-white">
           <p className="text-center text-lg mb-2">Solusi dari Squadgames</p>
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[65%]">
@@ -125,7 +125,7 @@ export default function Home() {
         </section>
       </section>
 
-      <section className="space-y-6 py-[5rem]">
+      <section className="space-y-6 pt-[3rem] md:pt-[5rem] pb-[2rem] md:pb-[5rem]">
         <div className="container flex-row justify-center items-center">
           <p className="text-center text-lg mb-2">Mengapa Squadgames?</p>
           <h2 className="text-center text-2xl md:text-3xl font-bold mb-[5rem] mx-auto md:max-w-[70%]">
@@ -136,12 +136,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[5rem] bg-games-gradient">
+      <section className="space-y-6 py-[3rem] md:py-[5rem] bg-games-gradient">
         <div className="container flex-row justify-center items-center">
           <p className="text-center text-lg mb-2 text-white">
             Training tapi bermain games
           </p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[5rem] mx-auto md:max-w-[70%] text-white">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[3rem] md:mb-[5rem] mx-auto md:max-w-[70%] text-white">
             Games yang dirancang untuk meningkatkan soliditas tim dengan
             aktivitas yang menyenangkan
           </h2>
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 py-[6rem]">
+      <section className="space-y-6 pt-[4rem] md:pt-[7rem] pb-[3rem] md:pb-[6rem]">
         <div className="container flex-row justify-center items-center">
           <h3 className="text-center text-lg md:text-xl font-medium">
             Telah dipercaya 500+ perusahaan di berbagai industri
@@ -160,40 +160,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* program training goes here */}
-
-      <section className="space-y-6 pt-[2rem] pb-[4rem]">
+      <section className="space-y-6 pt-[2rem] pb-[1rem] md:pb-[4rem]">
         <div className="container flex-row justify-center items-center">
           <p className="text-center text-lg mb-2 ">Program Team Building</p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[2rem] md:mb-[4rem] mx-auto md:max-w-[70%] ">
             Pilih program yang sesuai dengan kebutuhan Anda
           </h2>
           <Program />
         </div>
       </section>
 
-      <section className="space-y-6 pt-[5rem] pb-[3rem]">
+      <section className="space-y-6 pt-[3rem] md:pb-[3rem]">
         <div className="container justify-center items-center">
           <p className="text-center text-lg mb-2 ">
             Bertemu ahli di setiap bidang
           </p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[4rem] mx-auto md:max-w-[70%] ">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[2rem] md:mb-[4rem] mx-auto md:max-w-[70%] ">
             Para ahli yang akan menemani Anda bermain dan berakselerasi bersama
           </h2>
           <ExpertCard />
         </div>
       </section>
 
-      <section className="space-y-6 py-[4rem]">
+      <section className="space-y-6 pt-[3rem] md:pt-[4rem] pb-[1rem] md:pb-[4rem]">
         <div className="container">
           <Faq />
         </div>
       </section>
 
-      <section className="space-y-6 py-[3rem] mb-[1rem]">
+      <section className="space-y-6 py-[2rem] mb-[1rem]">
         <div className="container">
           <Image src={logo} alt="logo" className="w-[150px] mx-auto mb-5" />
-          <h2 className="text-center text-3xl md:text-4xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
             Siap untuk bermain bersama Squadgames?
           </h2>
           <p className="text-center text-base font-light mb-2 mx-auto md:w-[70%] lg:w-[50%]">

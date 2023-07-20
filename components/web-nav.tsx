@@ -21,17 +21,17 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
   const [showInfo, setShowInfo] = useState(true);
   const [showNav, setShowNav] = useState(false);
 
-  // useEffect(() => {
-  //   const _classList = [];
-  //   if (scroll.y > 250 && scroll.y - scroll.lastY > 0) {
-  //     _classList.push("nav--hidden");
-  //   }
+  useEffect(() => {
+    const _classList = [];
+    if (scroll.y > 150) {
+      _classList.push("info--hidden");
+    }
 
-  //   setNavClassList(_classList);
-  // }, [scroll.y, scroll.lastY]);
+    setNavClassList(_classList);
+  }, [scroll.y, scroll.lastY]);
 
   return (
-    <>
+    <div className={`web-header ${!showNav ? navClassList.join(" ") : null}`}>
       {showInfo && (
         <div className="info">
           <p className="text-center">
@@ -42,17 +42,17 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
             </Link>
           </p>
 
-          <button
+          {/* <button
             onClick={() => setShowInfo(false)}
             className="absolute right-5 top-10 sm:top-4 text-black"
           >
             x
-          </button>
+          </button> */}
         </div>
       )}
-      <header className={`web-nav ${!showNav ? navClassList.join(" ") : null}`}>
-        <div className={`container flex justify-between items-center`}>
-          <Link href="/" className="flex">
+      <header className="web-nav">
+        <div className="container flex justify-between items-center">
+          <Link href="/" className="flex" onClick={() => setShowNav(false)}>
             <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
           </Link>
           {items?.length ? (
@@ -78,9 +78,11 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
             </button>
           </div>
         </div>
-        {showNav && <MobileNav items={items} />}
+        {showNav && (
+          <MobileNav items={items} showNav={showNav} setShowNav={setShowNav} />
+        )}
       </header>
-    </>
+    </div>
   );
 };
 

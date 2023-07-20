@@ -36,7 +36,7 @@ const WebFooter = () => {
           ))}
         </div>
       </div>
-      <div className="container flex flex-col md:flex-row text-white border-t border-t-[#D9BCFF] py-[2rem]">
+      <div className="container flex flex-col md:flex-row text-white border-t border-t-[#D9BCFF] py-[1rem]">
         <div className="flex gap-3 text-white text-3xl mr-[10rem] mb-[2rem]">
           <Link href="https://linkedin.com" target="_blank" className="">
             <AiFillLinkedin />

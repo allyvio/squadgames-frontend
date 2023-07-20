@@ -39,7 +39,7 @@ const ExpertCard = () => {
     >
       {expertData.map((expert, i) => (
         <SwiperSlide key={i} className="">
-          <div className="bg-darkPurple2 rounded-3xl overflow-hidden mb-[3rem]">
+          <div className="bg-darkPurple2 rounded-3xl overflow-hidden mb-[2rem]">
             <div className="bg-darkPurple2 pt-3 border border-darkPurple rounded-2xl">
               <Image
                 src={expert.pic}

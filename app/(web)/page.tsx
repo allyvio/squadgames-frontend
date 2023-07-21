@@ -31,7 +31,11 @@ export default function Home() {
                 aktivitas yang asik, beda, dan insightful
               </p>
               <div className="mb-[3rem]">
-                <Link href="/" target="_blank" className="btn-orange">
+                <Link
+                  href="/"
+                  target="_blank"
+                  className="btn-md-orange md:btn-orange"
+                >
                   Selengkapnya
                 </Link>
               </div>
@@ -101,7 +105,7 @@ export default function Home() {
                 alt="squadgames"
                 className="max-w-[250px] my-5"
               />
-              <p className="text-lg text-white mb-10">
+              <p className="text-lg text-white mb-5 md:mb-10">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repudiandae beatae quod dolorum tenetur impedit quo, excepturi,
                 inventore animi blanditiis nesciunt saepe possimus consectetur
@@ -114,7 +118,7 @@ export default function Home() {
                 <Link
                   href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
                   target="_blank"
-                  className="btn-orange"
+                  className="btn-md-orange md:btn-orange"
                 >
                   Konsultasi Sekarang
                 </Link>
@@ -160,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-6 pt-[2rem] pb-[1rem] md:pb-[4rem]">
+      {/* <section className="space-y-6 pt-[2rem] pb-[1rem] md:pb-[4rem]">
         <div className="container flex-row justify-center items-center">
           <p className="text-center text-lg mb-2 ">Program Team Building</p>
           <h2 className="text-center text-2xl md:text-3xl font-bold mb-[2rem] md:mb-[4rem] mx-auto md:max-w-[70%] ">
@@ -168,7 +172,7 @@ export default function Home() {
           </h2>
           <Program />
         </div>
-      </section>
+      </section> */}
 
       <section className="space-y-6 pt-[3rem] md:pb-[3rem]">
         <div className="container justify-center items-center">

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, useState, useEffect } from "react";
-import { WebNavItem } from "@/types";
+import { ProductNavItem, WebNavItem } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import useScrollListener from "@/hooks/useScroll";
@@ -9,17 +9,21 @@ import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import MobileNav from "./mobile-nav";
 import logo from "@/public/logo.png";
+import { BiSolidDownArrow } from "react-icons/bi";
+import DropdownNav from "./product-nav";
 
 interface WebNavProps {
   items?: WebNavItem[];
+  productNav?: ProductNavItem;
   children?: React.ReactNode;
 }
 
-const WebNav: FC<WebNavProps> = ({ items, children }) => {
+const WebNav: FC<WebNavProps> = ({ items, productNav, children }) => {
   const [navClassList, setNavClassList] = useState([]);
   const scroll = useScrollListener();
   const [showInfo, setShowInfo] = useState(true);
   const [showNav, setShowNav] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const _classList = [];
@@ -56,19 +60,39 @@ const WebNav: FC<WebNavProps> = ({ items, children }) => {
             <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
           </Link>
           {items?.length ? (
-            <nav className="hidden md:flex gap-6 ">
+            <nav className="hidden md:flex ">
               {items?.map((item, index) => (
-                <Link
+                <div
                   key={index}
-                  href={item.href}
-                  target={`${item.blank ? "_blank" : "_self"}`}
-                  className="py-2 px-3 hover:text-darkPurple"
+                  onMouseOver={index === 0 ? () => setShowDropdown(true) : null}
+                  onMouseLeave={
+                    index === 0 ? () => setShowDropdown(false) : null
+                  }
+                  className="p-1 flex"
                 >
-                  {item.title}
-                </Link>
+                  <Link
+                    href={item.href}
+                    target={`${item.blank ? "_blank" : "_self"}`}
+                    onClick={() => setShowDropdown(false)}
+                    className="py-2 px-6 hover:text-darkPurple flex items-center"
+                  >
+                    {item.title}
+
+                    {item.arrow && (
+                      <BiSolidDownArrow className="text-[10px] ml-1" />
+                    )}
+                  </Link>
+                </div>
               ))}
             </nav>
           ) : null}
+
+          <DropdownNav
+            productNav={productNav}
+            showDropdown={showDropdown}
+            setShowDropdown={setShowDropdown}
+          />
+
           <div className="bg-transparent w-10 h-10 flex justify-center items-center">
             <button
               className="text-darkPurple text-2xl p-2 md:hidden"

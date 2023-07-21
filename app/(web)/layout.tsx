@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import WebFooter from "@/components/web-footer";
 import WebNav from "@/components/web-nav";
-import { webNavConfig } from "@/config/web";
+import { webNavConfig, productNavConfig } from "@/config/nav";
 
 interface WebLayoutProps {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface WebLayoutProps {
 const WebLayout: FC<WebLayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
-      <WebNav items={webNavConfig} />
+      <WebNav items={webNavConfig} productNav={productNavConfig} />
       <main className="flex-1">{children}</main>
       <WebFooter />
     </div>

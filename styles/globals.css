@@ -43,13 +43,13 @@
 }
 
 .web-nav {
-  @apply py-[7px] sticky z-40 top-0 text-center bg-white;
+  @apply py-1 sticky z-40 top-0 text-center bg-white;
 }
 
 .web-header {
-  @apply sticky z-40 top-0 text-center bg-white transition-transform ease-in-out duration-300 md:duration-700;
+  @apply sticky z-40 top-0 text-center bg-white transition-transform ease-in-out duration-300 md:duration-700 border-b border-[#ededed];
 }
 
 .web-header.info--hidden {
-  @apply translate-y-[-60%]  md:translate-y-[-52%] border-b border-[#ddd];
+  @apply translate-y-[-63%]  md:translate-y-[-52%]  border-[#ddd];
 }

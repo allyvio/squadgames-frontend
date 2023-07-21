@@ -4,53 +4,53 @@ export const footerData = [
     items: [
       {
         name: "Dukungan purna jual",
-        link: "/dukungan-purna-jual",
+        link: "/after-sales",
         blank: false,
       },
       {
         name: "Klien kami",
-        link: "/klien-kami",
-        blank: false,
-      },
-    ],
-  },
-  {
-    title: "Training",
-    items: [
-      {
-        name: "Softskill training",
-        link: "/training",
-        blank: false,
-      },
-      {
-        name: "In venue team building",
-        link: "/training",
-        blank: false,
-      },
-      {
-        name: "Team building in city",
-        link: "/training",
-        blank: false,
-      },
-      {
-        name: "Corporate event",
-        link: "/training",
-        blank: false,
-      },
-      {
-        name: "Family gathering",
-        link: "/training",
-        blank: false,
-      },
-      {
-        name: "Retirement preparation",
-        link: "/training",
+        link: "/our-client",
         blank: false,
       },
     ],
   },
   {
     title: "Produk",
+    items: [
+      {
+        name: "Softskill training",
+        link: "/product",
+        blank: false,
+      },
+      {
+        name: "In venue team building",
+        link: "/product",
+        blank: false,
+      },
+      {
+        name: "Team building in city",
+        link: "/product",
+        blank: false,
+      },
+      {
+        name: "Corporate event",
+        link: "/product",
+        blank: false,
+      },
+      {
+        name: "Family gathering",
+        link: "/product",
+        blank: false,
+      },
+      {
+        name: "Retirement preparation",
+        link: "/product",
+        blank: false,
+      },
+    ],
+  },
+  {
+    title: "Solusi",
     items: [
       {
         name: "Peopleshift",
@@ -74,12 +74,12 @@ export const footerData = [
     items: [
       {
         name: "Tentang Squadgames",
-        link: "/tentang-squadgames",
+        link: "/about-squadgames",
         blank: false,
       },
       {
         name: "Hubungi kami",
-        link: "/hubungi-kami",
+        link: "/contact-us",
         blank: true,
       },
       {

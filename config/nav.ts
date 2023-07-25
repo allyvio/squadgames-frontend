@@ -6,18 +6,46 @@ export const webNavConfig: WebNavItem[] = [
     href: "/product",
     blank: false,
     arrow: true,
+    products: [
+      {
+        title: "Softskill Training",
+        href: "/softskill-training",
+      },
+      {
+        title: "In-Venue Team Building",
+        href: "/in-venue",
+      },
+      {
+        title: "Team Building in City",
+        href: "/team-building",
+      },
+      {
+        title: "Corporate Event",
+        href: "/corporate-event",
+      },
+      {
+        title: "Family Gathering",
+        href: "/family-gathering",
+      },
+      {
+        title: "Retirement Preparation",
+        href: "/retirement-preparation",
+      },
+    ],
   },
   {
     title: "Harga",
     href: "/price",
     blank: false,
     arrow: false,
+    products: [],
   },
   {
     title: "Hubungi Kami",
     href: "https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training",
     blank: true,
     arrow: false,
+    products: [],
   },
 ];
 

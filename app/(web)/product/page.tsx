@@ -4,7 +4,7 @@ import Link from "next/link";
 import heroImage from "@/public/images/teambuilding.jpg";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-const Product = () => {
+const ProductPage = () => {
   return (
     <>
       <section className="space-y-6 pt-[3rem] md:pt-[5rem] ">
@@ -48,4 +48,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductPage;

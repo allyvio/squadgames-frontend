@@ -1,8 +1,14 @@
+export type ProductNav = {
+  title: string;
+  href: string;
+};
+
 export type WebNavItem = {
   title: string;
   href: string;
   blank: boolean;
   arrow: boolean;
+  products: ProductNav[];
 };
 
 export type DropdownContent = {
@@ -20,25 +26,38 @@ export type ProductNavItem = {
   "Retirement Preparation": DropdownContent;
 };
 
-// export type DropdownNavItem = {
-//   title: string;
-//   desc: string;
-//   href: string;
-// };
-
-// export type ProductNavItem = {
-//   title: string;
-//   name: string;
-//   desc: string;
-//   topics: string[];
-//   methods: string[];
-//   duration: string;
-//   images?: string[];
-//   href: string;
-// };
-
 export type AccordionConfig = {
   title: string;
   icon: string;
   desc: string;
+};
+
+export type ProductHero = {
+  meta: string;
+  title: string;
+  desc: string;
+  action: string;
+  image: string;
+};
+
+export type ProductTestimonial = {
+  name: string;
+  title: string;
+  testimony: string;
+  image: string;
+};
+
+export type ProductContent = {
+  title: string;
+  desc: string;
+  topics: string[];
+  methods: string[];
+  duration: string;
+  images: string[];
+  testimonials: ProductTestimonial[];
+};
+
+export type Product = {
+  heros: ProductHero;
+  contents: ProductContent;
 };

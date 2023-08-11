@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   });
 }
 
-export function generateMetaData({ params }: { params: { slug: string } }) {
+export function generateMetadata({ params }: { params: { slug: string } }) {
   const product = productData.find(
     (product) =>
       product.heros.meta.toLowerCase().replace(" ", "-") === params.slug

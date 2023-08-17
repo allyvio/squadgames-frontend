@@ -1,6 +1,6 @@
-import img1 from "@/public/images/beda.png";
-import img2 from "@/public/images/kontekstual.png";
-import img3 from "@/public/images/profesional.png";
+import img1 from "@/public/images/beda2.png";
+import img2 from "@/public/images/kontekstual2.png";
+import img3 from "@/public/images/profesional2.png";
 
 export const reasonData = [
   {

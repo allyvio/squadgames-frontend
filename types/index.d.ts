@@ -58,6 +58,7 @@ export type ProductContent = {
 };
 
 export type Product = {
+  id: number;
   heros: ProductHero;
   contents: ProductContent;
 };

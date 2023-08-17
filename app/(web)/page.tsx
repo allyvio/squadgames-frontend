@@ -7,7 +7,7 @@ import Accordion from "@/components/accordion";
 import logoWhite from "@/public/logo-white.png";
 import logo from "@/public/logo.png";
 import GamesCard from "@/components/games-card";
-import heroImg from "@/public/images/hero-image.png";
+import heroImg from "@/public/images/heroimage.png";
 import chart from "@/public/images/chart.png";
 import Company from "@/components/company";
 import ExpertCard from "@/components/expert-card";

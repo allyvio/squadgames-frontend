@@ -2,16 +2,14 @@
 
 import React, { FC } from "react";
 import Image from "next/image";
-import { expertData } from "@/config/expert";
-import { BsLinkedin } from "react-icons/bs";
-import { HiArrowLongRight } from "react-icons/hi2";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Zoom } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/zoom";
 
 interface Gallery {
   images?: any;
@@ -20,26 +18,25 @@ interface Gallery {
 const Gallery: FC<Gallery> = ({ images }) => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      // spaceBetween={10}
-
+      modules={[Navigation, Pagination, Scrollbar, A11y, Zoom]}
       slidesPerView={1}
       // navigation
       // scrollbar
       loop={true}
-      // pagination={{ clickable: true }}
+      zoom={true}
+      pagination={{ clickable: true }}
       // onSwiper={(swiper) => console.log(swiper)}
       breakpoints={{
         768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
+          slidesPerView: 1,
+          spaceBetween: 10,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 10,
         },
         1200: {
-          slidesPerView: 4.3,
+          slidesPerView: 3,
           spaceBetween: 10,
         },
       }}
@@ -47,14 +44,14 @@ const Gallery: FC<Gallery> = ({ images }) => {
     >
       {images.map((image, i) => (
         <SwiperSlide key={i} className="">
-          <div className="mb-[2rem]">
+          <div className="mb-[2rem] overflow-hidden relative rounded-xl">
             <div className=" border-darkPurple rounded-2xl">
               <Image
                 src={image}
                 width={100}
                 height={100}
                 alt="expert"
-                className="w-full h-72 bg-gray-200 object-contain"
+                className="w-full h-96 bg-gray-200 object-cover"
               />
             </div>
           </div>

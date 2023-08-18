@@ -39,13 +39,13 @@ const Product = ({ params }: { params: { slug: string } }) => {
     <>
       <section className="space-y-6 pt-[3rem] md:pt-[5rem] ">
         <div className="flex-row">
-          <div className="container grid-cols-1 grid md:grid-cols-[1fr,1fr] gap-10">
+          <div className="container grid-cols-1 grid md:grid-cols-[1fr,1fr] gap-10 mb-[2rem]">
             <div className="flex flex-col">
               <h1 className="text-[2rem] leading-none md:text-[40px] font-semibold mb-5">
                 {product.contents.title}
               </h1>
               <p className="mb-5 max-w-[85%]">{product.contents.desc}</p>
-              {/* <div className="mb-[3rem]">
+              <div className="mt-[1rem]">
                 <Link
                   href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
                   target="_blank"
@@ -56,7 +56,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
                   </span>
                   {product.heros.action}
                 </Link>
-              </div> */}
+              </div>
             </div>
             <div className="flex rounded-xl relative overflow-hidden">
               <Image
@@ -68,7 +68,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
               />
             </div>
           </div>
-          <div className="container grid grid-cols-3 mb-[1rem]">
+          <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem]">
             <div className="flex flex-col">
               <h2 className="text-lg font-bold mb-5">Topik Pembahasan</h2>
               {product.contents.topics.map((topic, i) => (
@@ -96,8 +96,8 @@ const Product = ({ params }: { params: { slug: string } }) => {
             <div className="flex flex-col">
               <h2 className="text-lg font-bold mb-5">Durasi Training</h2>
               <div className="flex flex-col justify-between h-full ">
-                <p>{product.contents.duration}</p>
-                <div className="mb-[3rem]">
+                <p className="mb-5">{product.contents.duration}</p>
+                {/* <div className="mb-[3rem]">
                   <Link
                     href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
                     target="_blank"
@@ -108,14 +108,14 @@ const Product = ({ params }: { params: { slug: string } }) => {
                     </span>
                     {product.heros.action}
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="space-y-6 pt-[3rem] md:pt-[5rem] ">
+      <section className="space-y-6 md:pt-[5rem] ">
         <div className="container">
           <Gallery images={product.contents.images} />
         </div>

@@ -6,6 +6,9 @@ import Link from "next/link";
 import { GiCheckMark } from "react-icons/gi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Gallery from "@/components/gallery";
+import CaseStudy from "@/components/case-study";
+import FaqProduct from "@/components/faq-product";
+import "styles/styles.css";
 
 export async function generateStaticParams() {
   return productData.map((data) => {
@@ -68,56 +71,92 @@ const Product = ({ params }: { params: { slug: string } }) => {
               />
             </div>
           </div>
-          <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem]">
-            <div className="flex flex-col">
-              <h2 className="text-lg font-bold mb-5">Topik Pembahasan</h2>
-              {product.contents.topics.map((topic, i) => (
-                <ul key={i} className="flex items-center gap-2">
-                  <span className="mb-2">
-                    <GiCheckMark />
-                  </span>
-                  <li className="mb-2">{topic}</li>
-                </ul>
-              ))}
-            </div>
+        </div>
+      </section>
 
-            <div className="flex flex-col">
-              <h2 className="text-lg font-bold mb-5">Metode Training</h2>
-              {product.contents.methods.map((topic, i) => (
-                <ul key={i} className="flex items-center gap-2">
-                  <span className="mb-2">
-                    <GiCheckMark />
-                  </span>
-                  <li className="mb-2">{topic}</li>
-                </ul>
-              ))}
-            </div>
+      <section className="space-y-6 md:py-[3rem] big-card-bg-gradient">
+        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] text-white">
+          <div className="flex flex-col">
+            <h2 className="text-lg font-bold mb-5">Topik Pembahasan</h2>
+            {product.contents.topics.map((topic, i) => (
+              <ul key={i} className="flex items-center gap-2">
+                <span className="mb-2">
+                  <GiCheckMark />
+                </span>
+                <li className="mb-2">{topic}</li>
+              </ul>
+            ))}
+          </div>
 
-            <div className="flex flex-col">
-              <h2 className="text-lg font-bold mb-5">Durasi Training</h2>
-              <div className="flex flex-col justify-between h-full ">
-                <p className="mb-5">{product.contents.duration}</p>
-                {/* <div className="mb-[3rem]">
-                  <Link
-                    href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
-                    target="_blank"
-                    className="btn-md-orange"
-                  >
-                    <span className="text-white text-xl mr-2">
-                      <IoLogoWhatsapp />
-                    </span>
-                    {product.heros.action}
-                  </Link>
-                </div> */}
-              </div>
+          <div className="flex flex-col">
+            <h2 className="text-lg font-bold mb-5">Metode Training</h2>
+            {product.contents.methods.map((topic, i) => (
+              <ul key={i} className="flex items-center gap-2">
+                <span className="mb-2">
+                  <GiCheckMark />
+                </span>
+                <li className="mb-2">{topic}</li>
+              </ul>
+            ))}
+          </div>
+
+          <div className="flex flex-col">
+            <h2 className="text-lg font-bold mb-5">Durasi Training</h2>
+            <div className="flex flex-col justify-between h-full ">
+              <p className="mb-5">{product.contents.duration}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="space-y-6 md:pt-[5rem] ">
+      <section className="space-y-6 md:pt-[3rem] ">
         <div className="container">
           <Gallery images={product.contents.images} />
+        </div>
+      </section>
+
+      <section className="space-y-6 md:py-[5rem] md:my-[3rem] bg-slate-100">
+        <div className="container">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-2">
+            Cerita sukses klien yang telah mempercayai Squadgames
+          </h2>
+          <p className="text-center text-base font-light mb-[3rem] mx-auto md:w-[70%] lg:w-[50%]">
+            Solusi: {product.contents.title}
+          </p>
+          <CaseStudy caseStudies={product.caseStudy} />
+        </div>
+      </section>
+
+      <section className="space-y-6 pt-[3rem] md:pt-[4rem] pb-[1rem] md:pb-[4rem]">
+        <div className="container">
+          <FaqProduct faq={product.faq} />
+        </div>
+      </section>
+
+      <section className="space-y-6 py-[2rem] mb-[1rem]">
+        <div className="container ">
+          <div className="bg-slate-100 py-[3rem] border border-[#ABD3E8] rounded-md">
+            <h2 className="text-center text-2xl md:text-3xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
+              Siap untuk bermain bersama Squadgames?
+            </h2>
+            <p className="text-center text-base font-light mb-2 mx-auto md:w-[70%] lg:w-[50%]">
+              Tingkatkan performa tim Anda lewat training yang menyenangkan
+              dengan berbagai games dari Squadgames.
+            </p>
+
+            <div className="flex justify-center mt-[2rem]">
+              <Link
+                href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
+                target="_blank"
+                className="btn-md-orange"
+              >
+                <span className="text-white text-xl mr-2">
+                  <IoLogoWhatsapp />
+                </span>
+                Jadwalkan Konsultasi Gratis
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

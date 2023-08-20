@@ -3,13 +3,13 @@ import Link from "next/link";
 import { WebNavItem } from "@/types";
 import { BiSolidDownArrow } from "react-icons/bi";
 
-interface MobileNavProps {
+interface IMobileNavProps {
   items: WebNavItem[];
   showNav: boolean;
   setShowNav: Dispatch<SetStateAction<boolean>>;
 }
 
-const MobileNav: FC<MobileNavProps> = ({ items, setShowNav, showNav }) => {
+const MobileNav: FC<IMobileNavProps> = ({ items, setShowNav, showNav }) => {
   const [showProductNav, setShowProductNav] = useState(false);
 
   return (

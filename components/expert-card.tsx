@@ -38,12 +38,12 @@ const ExpertCard = () => {
     >
       {expertData.map((expert, i) => (
         <SwiperSlide key={i} className="">
-          <div className="bg-darkPurple2 rounded-3xl overflow-hidden mb-[2rem]">
-            <div className=" border-darkPurple rounded-2xl">
+          <div className="bg-darkPurple2 rounded-lg overflow-hidden mb-[2rem]">
+            <div className=" border-darkPurple rounded-xl">
               <Image
                 src={expert.pic}
                 alt="expert"
-                className="w-full h-72 bg-gray-200 object-contain rounded-t-2xl"
+                className="w-full h-72 bg-gray-200 object-contain rounded-t-lg"
               />
               <h3 className="bg-hero-gradient text-white text-lg uppercase text-center font-bold w-full h-auto py-2">
                 {expert.name}

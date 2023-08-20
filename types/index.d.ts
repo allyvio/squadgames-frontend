@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type ProductNav = {
   title: string;
   href: string;
@@ -57,8 +59,30 @@ export type ProductContent = {
   testimonials: ProductTestimonial[];
 };
 
+export type ProductCaseStudy = {
+  id: number;
+  image: string;
+  title: string;
+  desc: string;
+  href: string;
+};
+
+export type ProductFaqDetail = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
+export type ProductFaq = {
+  title: string;
+  desc: string;
+  contents: ProductFaqDetail[];
+};
+
 export type Product = {
   id: number;
   heros: ProductHero;
   contents: ProductContent;
+  caseStudy: ProductCaseStudy[];
+  faq: ProductFaq;
 };

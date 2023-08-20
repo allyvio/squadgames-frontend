@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-interface DropdownProps {
+interface IDropdownProps {
   productNav?: ProductNavItem;
   showDropdown: boolean;
   setShowDropdown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const DropdownNav: React.FC<DropdownProps> = ({
+const DropdownNav: React.FC<IDropdownProps> = ({
   showDropdown,
   setShowDropdown,
   productNav,

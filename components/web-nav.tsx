@@ -12,13 +12,13 @@ import logo from "@/public/logo.png";
 import { BiSolidDownArrow } from "react-icons/bi";
 import DropdownNav from "./product-nav";
 
-interface WebNavProps {
+interface IWebNavProps {
   items?: WebNavItem[];
   productNav?: ProductNavItem;
   children?: React.ReactNode;
 }
 
-const WebNav: FC<WebNavProps> = ({ items, productNav, children }) => {
+const WebNav: FC<IWebNavProps> = ({ items, productNav, children }) => {
   const [navClassList, setNavClassList] = useState([]);
   const scroll = useScrollListener();
   const [showInfo, setShowInfo] = useState(true);

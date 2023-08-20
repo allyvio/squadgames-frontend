@@ -44,7 +44,7 @@ const Gallery: FC<Gallery> = ({ images }) => {
     >
       {images.map((image, i) => (
         <SwiperSlide key={i} className="">
-          <div className="mb-[2rem] overflow-hidden relative rounded-xl">
+          <div className="mb-[2rem] overflow-hidden relative rounded-sm">
             <div className=" border-darkPurple rounded-2xl">
               <Image
                 src={image}

@@ -5,8 +5,8 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
-import { faqData } from "@/config/faq";
 import { Collapse } from "react-collapse";
+import { ProductFaq } from "@/types";
 
 interface IAccordionProps {
   section: {
@@ -17,6 +17,11 @@ interface IAccordionProps {
   setActiveIndex: Dispatch<SetStateAction<number>>;
   sectionIndex: number;
 }
+
+interface IFaq {
+  faq: ProductFaq;
+}
+
 const AccordionSection: FC<IAccordionProps> = ({
   section,
   isActiveSection,
@@ -54,12 +59,12 @@ const AccordionSection: FC<IAccordionProps> = ({
   );
 };
 
-const FaqAccordion = () => {
+const FaqProductAccordion: FC<IFaq> = ({ faq }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     <div className="flex flex-col gap-2">
-      {faqData?.map((section, index) => (
+      {faq.contents?.map((section, index) => (
         <AccordionSection
           key={index}
           section={section}
@@ -72,4 +77,4 @@ const FaqAccordion = () => {
   );
 };
 
-export default FaqAccordion;
+export default FaqProductAccordion;

@@ -74,8 +74,8 @@ const Product = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
 
-      <section className="space-y-6 md:py-[3rem] big-card-bg-gradient">
-        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] text-white">
+      <section className="space-y-6 py-[2rem] md:py-[3rem] big-card-bg-gradient">
+        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] text-white ">
           <div className="flex flex-col">
             <h2 className="text-lg font-bold mb-5">Topik Pembahasan</h2>
             {product.contents.topics.map((topic, i) => (
@@ -109,13 +109,13 @@ const Product = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
 
-      <section className="space-y-6 md:pt-[3rem] ">
+      <section className="space-y-6 py-[2rem] md:py-[3rem] ">
         <div className="container">
           <Gallery images={product.contents.images} />
         </div>
       </section>
 
-      <section className="space-y-6 md:py-[5rem] md:my-[3rem] bg-slate-100">
+      <section className="space-y-6 py-[2rem] md:py-[5rem] bg-slate-100">
         <div className="container">
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-2">
             Cerita sukses klien yang telah mempercayai Squadgames
@@ -134,8 +134,8 @@ const Product = ({ params }: { params: { slug: string } }) => {
       </section>
 
       <section className="space-y-6 py-[2rem] mb-[1rem]">
-        <div className="container ">
-          <div className="bg-slate-100 py-[3rem] border border-[#ABD3E8] rounded-md">
+        <div className="container">
+          <div className="bg-slate-100 py-[3rem]  px-[1rem] border border-[#ABD3E8] rounded-md">
             <h2 className="text-center text-2xl md:text-3xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
               Siap untuk bermain bersama Squadgames?
             </h2>

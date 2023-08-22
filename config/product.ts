@@ -34,32 +34,31 @@ export const productData: Product[] = [
       ],
       testimonials: [
         {
-          name: "john doe",
-          title: "karyawan",
-          testimony:
-            "voluptas dolor suscipit voluptates repellendus aperiam consectetur deleniti quidem. Id possimus ab quaerat soluta qui facere, magni",
-          image: "/public/images/foto3.png",
+          name: "",
+          title: "",
+          testimony: "",
+          image: "",
         },
       ],
     },
     caseStudy: [
       {
         id: 1,
-        image: "/images/pln-logo.jpg",
+        image: "/images/tech1.jpeg",
         title: "PLN Muda",
         desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
         href: "link",
       },
       {
         id: 2,
-        image: "/images/download.png",
+        image: "/images/tech2.jpeg",
         title: "Pertamina",
         desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
         href: "link",
       },
       {
         id: 3,
-        image: "/images/bank-mandiri.png",
+        image: "/images/tech3.jpg",
         title: "Bappenas",
         desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
         href: "link",
@@ -67,7 +66,7 @@ export const productData: Product[] = [
     ],
     faq: {
       title: "Softskills Training with Experiential Learning Approach",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex asdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex asdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex. \n bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex asdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex",
       contents: [
         {
           id: 1,
@@ -83,6 +82,18 @@ export const productData: Product[] = [
         },
         {
           id: 3,
+          question: "apakah yang dimaksud dengan Softskill Training?",
+          answer:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex nesciunt placeat natus quas ad.",
+        },
+        {
+          id: 4,
+          question: "apakah yang dimaksud dengan Softskill Training?",
+          answer:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex nesciunt placeat natus quas ad.",
+        },
+        {
+          id: 5,
           question: "apakah yang dimaksud dengan Softskill Training?",
           answer:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex nesciunt placeat natus quas ad.",
@@ -114,11 +125,10 @@ export const productData: Product[] = [
       images: ["/public/images/foto1.png"],
       testimonials: [
         {
-          name: "john doe",
-          title: "karyawan",
-          testimony:
-            "voluptas dolor suscipit voluptates repellendus aperiam consectetur deleniti quidem. Id possimus ab quaerat soluta qui facere, magni",
-          image: "/public/images/foto3.png",
+          name: "",
+          title: "",
+          testimony: "",
+          image: "",
         },
       ],
     },

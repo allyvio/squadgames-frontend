@@ -53,3 +53,35 @@
 .web-header.info--hidden {
   @apply translate-y-[-63%]  md:translate-y-[-52%]  border-[#ddd];
 }
+
+/* swiper */
+
+.swiper-pagination.swiper-pagination-clickable
+  .swiper-pagination-bullets
+  .swiper-pagination-horizontal {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 32px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 2px 6px;
+  background-color: #43464b;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #8a40f5;
+}
+
+.swiper-button-next {
+  top: 0;
+  position: relative;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  top: 0;
+  font-size: 2px;
+}

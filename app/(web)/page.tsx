@@ -92,12 +92,12 @@ export default function Home() {
         <div className="container md:pb-[3rem] text-white">
           <p className="text-center text-lg mb-2">Solusi dari Squadgames</p>
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[65%]">
-            Squadgames will help you create team building events{" "}
-            <span className="text-orange">like never before</span>
+            Squadgames akan membantu Anda merancang team building training{" "}
+            <span className="text-orange"> yang tidak biasa</span>
           </h2>
         </div>
 
-        <section className="container flex justify-center items-center lg:px-[3rem] ">
+        <div className="container flex justify-center items-center lg:px-[3rem] ">
           <div className="grid grid-cols-1 lg:grid-cols-2 content-between gap-10">
             <div className="flex flex-col md:w-[90%]">
               <Image
@@ -106,13 +106,11 @@ export default function Home() {
                 className="max-w-[250px] my-5"
               />
               <p className="text-lg text-white mb-5 md:mb-10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae beatae quod dolorum tenetur impedit quo, excepturi,
-                inventore animi blanditiis nesciunt saepe possimus consectetur
-                iure dicta maiores commodi. Maiores iure illum veniam ipsa quae
-                soluta. Eius architecto beatae natus, maxime facere consequuntur
-                magni nemo, numquam, libero quaerat eligendi deleniti earum
-                delectus.
+                Squadgames menciptakan puluhan produk menarik berbasis
+                experiential learning, yang memunculkan berbagai produk mulai
+                dari onboarding programs, professional competency training,
+                hingga penciptaan learning process perusahaan yang komprehensif
+                dan sesuai dengan kondisi yang dihadapi dunia SDM saat ini.
               </p>
               <div>
                 <Link
@@ -126,7 +124,7 @@ export default function Home() {
             </div>
             <Accordion />
           </div>
-        </section>
+        </div>
       </section>
 
       <section className="space-y-6 pt-[3rem] md:pt-[5rem] pb-[2rem] md:pb-[5rem]">

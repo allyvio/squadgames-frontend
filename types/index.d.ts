@@ -34,14 +34,6 @@ export type AccordionConfig = {
   desc: string;
 };
 
-export type ProductHero = {
-  meta: string;
-  title: string;
-  desc: string;
-  action: string;
-  image: string;
-};
-
 export type ProductTestimonial = {
   name: string;
   title: string;
@@ -49,13 +41,29 @@ export type ProductTestimonial = {
   image: string;
 };
 
-export type ProductContent = {
+export type ProductTopic = {
+  id: number;
   title: string;
   desc: string;
-  topics: string[];
-  methods: string[];
+};
+
+export type ProductMethod = {
+  id: number;
+  title: string;
+  desc: string;
+};
+
+export type ProductContent = {
+  meta: string;
+  image: string;
+  title: string;
+  desc: string;
+  note: string;
   duration: string;
-  images: string[];
+  action: string;
+  topics: ProductTopic[];
+  methods: ProductMethod[];
+  gallery: string[];
   testimonials: ProductTestimonial[];
 };
 
@@ -81,7 +89,6 @@ export type ProductFaq = {
 
 export type Product = {
   id: number;
-  heros: ProductHero;
   contents: ProductContent;
   caseStudy: ProductCaseStudy[];
   faq: ProductFaq;

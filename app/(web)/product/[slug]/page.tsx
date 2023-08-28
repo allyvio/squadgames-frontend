@@ -9,11 +9,13 @@ import Gallery from "@/components/gallery";
 import CaseStudy from "@/components/case-study";
 import FaqProduct from "@/components/faq-product";
 import "styles/styles.css";
+import { FaUserTag } from "react-icons/fa";
+import { MdTimer } from "react-icons/md";
 
 export async function generateStaticParams() {
   return productData.map((data) => {
     return {
-      slug: data.heros.meta.toLowerCase().replace(" ", "-"),
+      slug: data.contents.meta.toLowerCase().replace(" ", "-"),
     };
   });
 }
@@ -21,7 +23,7 @@ export async function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const product = productData.find(
     (product) =>
-      product.heros.meta.toLowerCase().replace(" ", "-") === params.slug
+      product.contents.meta.toLowerCase().replace(" ", "-") === params.slug
   );
 
   if (!product) notFound();
@@ -34,7 +36,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 const Product = ({ params }: { params: { slug: string } }) => {
   const product = productData.find(
     (product) =>
-      product.heros.meta.toLowerCase().replace(" ", "-") === params.slug
+      product.contents.meta.toLowerCase().replace(" ", "-") === params.slug
   );
   if (!product) notFound();
 
@@ -47,6 +49,20 @@ const Product = ({ params }: { params: { slug: string } }) => {
               <h1 className="text-[2rem] leading-none md:text-[40px] font-semibold mb-5">
                 {product.contents.title}
               </h1>
+              <div className="flex gap-5 mb-5">
+                <div className="flex items-center gap-2">
+                  <span>
+                    <FaUserTag />
+                  </span>
+                  <span>{product.contents.note}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>
+                    <MdTimer />
+                  </span>
+                  <span>{product.contents.duration}</span>
+                </div>
+              </div>
               <p className="mb-5 max-w-[85%]">{product.contents.desc}</p>
               <div className="mt-[1rem]">
                 <Link
@@ -57,13 +73,13 @@ const Product = ({ params }: { params: { slug: string } }) => {
                   <span className="text-white text-xl mr-2">
                     <IoLogoWhatsapp />
                   </span>
-                  {product.heros.action}
+                  {product.contents.action}
                 </Link>
               </div>
             </div>
             <div className="flex rounded-xl relative overflow-hidden">
               <Image
-                src={product.heros.image}
+                src={product.contents.image}
                 alt="image"
                 width={500}
                 height={500}
@@ -75,43 +91,33 @@ const Product = ({ params }: { params: { slug: string } }) => {
       </section>
 
       <section className="space-y-6 py-[2rem] md:py-[3rem] big-card-bg-gradient">
-        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] text-white ">
-          <div className="flex flex-col">
-            <h2 className="text-lg font-bold mb-5">Topik Pembahasan</h2>
-            {product.contents.topics.map((topic, i) => (
-              <ul key={i} className="flex items-center gap-2">
-                <span className="mb-2">
-                  <GiCheckMark />
-                </span>
-                <li className="mb-2">{topic}</li>
-              </ul>
-            ))}
-          </div>
-
-          <div className="flex flex-col">
-            <h2 className="text-lg font-bold mb-5">Metode Training</h2>
-            {product.contents.methods.map((topic, i) => (
-              <ul key={i} className="flex items-center gap-2">
-                <span className="mb-2">
-                  <GiCheckMark />
-                </span>
-                <li className="mb-2">{topic}</li>
-              </ul>
-            ))}
-          </div>
-
-          <div className="flex flex-col">
-            <h2 className="text-lg font-bold mb-5">Durasi Training</h2>
-            <div className="flex flex-col justify-between h-full ">
-              <p className="mb-5">{product.contents.duration}</p>
+        <div className="flex flex-col text-white">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-2">
+            Topik Pembahasan
+          </h2>
+          <p className="text-center text-base font-light mb-[3rem] mx-auto md:w-[70%] lg:w-[50%]">
+            Program kami dilengkapi dengan topik pembahasan yang mendalam untuk
+            menjamin training mencapai tujuan dengan sempurna
+          </p>
+        </div>
+        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] place-content-center ">
+          {product.contents.topics.map((topic, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl overflow-hidden shadow-md relative"
+            >
+              <div className="py-6 px-8 flex flex-col">
+                <p className="text-lg font-bold mb-2">{topic.title}</p>
+                <p>{topic.desc}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section className="space-y-6 py-[2rem] md:py-[3rem] ">
         <div className="container">
-          <Gallery images={product.contents.images} />
+          <Gallery images={product.contents.gallery} />
         </div>
       </section>
 

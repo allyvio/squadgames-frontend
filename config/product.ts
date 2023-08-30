@@ -7,7 +7,7 @@ export const productData: Product[] = [
       meta: "Softskill Training",
       image: "/images/teambuilding.jpg",
       title: "Softskills Training with Experiential Learning Approach",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum, molestiae voluptas dolor suscipit voluptates repellendus aperiam consectetur deleniti quidem. Id possimus ab quaerat soluta qui facere, magni modi voluptate libero blanditiis accusantium Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      desc: "Kami memahami bahwa belajar lebih baik dilakukan dengan cara yang menarik dan relevan. Oleh karena itu, pendekatan Experiential Learning kami menggabungkan pembelajaran praktis dengan situasi dunia nyata. Tidak ada lagi belajar yang membosankan! Anda akan terlibat dalam simulasi, permainan peran, diskusi kelompok, dan proyek nyata yang memberikan pengalaman mendalam dan tak terlupakan.",
       note: "Hybrid, In person",
       duration: "1-5 Hari",
       action: "Jadwalkan Konsultasi Gratis",
@@ -20,23 +20,22 @@ export const productData: Product[] = [
         {
           id: 2,
           title: "Resources Management",
-
-          desc: "",
+          desc: "Pelajari alokasi sumber daya yang efisien. Maksimalkan potensi dengan bijak mengelola waktu, energi, dan alat.",
         },
         {
           id: 3,
           title: "Leadership",
-          desc: "",
+          desc: "Setiap individu memiliki bakal pemimpin di dalam dirinya. Kembangkan kualitas kepemimpinan yang menginspirasi dan membimbing.",
         },
         {
           id: 4,
           title: "Team Building",
-          desc: "",
+          desc: "Bangun ikatan emosional yang kuat dalam tim. Fasilitasi persatuan melalui training membangun kepercayaan dan komunikasi efektif.",
         },
         {
           id: 5,
           title: "Problem Solving",
-          desc: "",
+          desc: "Asah pemikiran kritis untuk memecahkan permasalahan yang ada. Hadapi tantangan secara strategis dan berikan solusi paling relevan.",
         },
       ],
       methods: [
@@ -106,7 +105,7 @@ export const productData: Product[] = [
     ],
     faq: {
       title: "Softskills Training with Experiential Learning Approach",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex asdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex. \n bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex asdasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ullam reiciendis tempore pariatur neque ex",
+      desc: "Program pelatihan untuk mengembangkan softskill melalui pendekatan belajar berdasarkan pengalaman langsung. Kami mengintegrasikan simulasi dan interaksi nyata untuk memperkuat kemampuan komunikasi, kerja tim, kreativitas, dan lainnya.",
       contents: [
         {
           id: 1,

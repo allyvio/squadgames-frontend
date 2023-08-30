@@ -11,6 +11,7 @@ import FaqProduct from "@/components/faq-product";
 import "styles/styles.css";
 import { FaUserTag } from "react-icons/fa";
 import { MdTimer } from "react-icons/md";
+import Methods from "@/components/methods";
 
 export async function generateStaticParams() {
   return productData.map((data) => {
@@ -64,7 +65,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
                 </div>
               </div>
               <p className="mb-5 max-w-[85%]">{product.contents.desc}</p>
-              <div className="mt-[1rem]">
+              <div className="my-[1rem]">
                 <Link
                   href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
                   target="_blank"
@@ -95,23 +96,33 @@ const Product = ({ params }: { params: { slug: string } }) => {
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-2">
             Topik Pembahasan
           </h2>
-          <p className="text-center text-base font-light mb-[3rem] mx-auto md:w-[70%] lg:w-[50%]">
+          <p className="text-center text-base font-light mb-[1rem] mx-auto w-[90%] md:w-[70%] lg:w-[50%]">
             Program kami dilengkapi dengan topik pembahasan yang mendalam untuk
             menjamin training mencapai tujuan dengan sempurna
           </p>
         </div>
-        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-[1rem] place-content-center ">
+
+        <div className="container pb-[1rem] flex justify-center items-center flex-wrap gap-3">
           {product.contents.topics.map((topic, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl overflow-hidden shadow-md relative"
+              className="bg-white rounded-2xl shadow-md md:w-[80%] lg:w-[30%] min-h-[180px]"
             >
-              <div className="py-6 px-8 flex flex-col">
+              <div className="py-6 px-8 flex flex-col ">
                 <p className="text-lg font-bold mb-2">{topic.title}</p>
                 <p>{topic.desc}</p>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="space-y-6 pt-[2rem]">
+        <div className="container pt-[1rem]">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-10">
+            Metode Training
+          </h2>
+          <Methods />
         </div>
       </section>
 

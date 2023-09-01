@@ -40,7 +40,7 @@ const Methods = () => {
           className="w-[100%] md:w-[20%] flex flex-col justify-center items-center"
         >
           <div className="text-[2.5rem] mb-5">{method.icon}</div>
-          <h2 className="font-semibold mb-2">{method.title}</h2>
+          <h2 className="font-bold mb-2">{method.title}</h2>
           <p>{method.desc}</p>
         </div>
       ))}

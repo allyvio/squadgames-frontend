@@ -43,7 +43,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <section className="space-y-6 pt-[3rem] md:pt-[5rem] ">
+      <section className="space-y-6 pt-[3rem] md:pt-[5rem] pb-[1rem]">
         <div className="flex-row">
           <div className="container grid-cols-1 grid md:grid-cols-[1fr,1fr] gap-10 mb-[2rem]">
             <div className="flex flex-col">
@@ -91,7 +91,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
 
-      <section className="space-y-6 py-[2rem] md:py-[3rem] big-card-bg-gradient">
+      <section className="space-y-6 py-[2rem] md:py-[4rem] big-card-bg-gradient">
         <div className="flex flex-col text-white">
           <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[70%] mb-2">
             Topik Pembahasan

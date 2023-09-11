@@ -19,32 +19,32 @@ export const footerData = [
     items: [
       {
         name: "Softskill training",
-        link: "/product",
+        link: "product/softskill-training",
         blank: false,
       },
       {
         name: "In venue team building",
-        link: "/product",
+        link: "product/in-venue",
         blank: false,
       },
       {
         name: "Team building in city",
-        link: "/product",
+        link: "product/team-building",
         blank: false,
       },
       {
         name: "Corporate event",
-        link: "/product",
+        link: "product/corporate-event",
         blank: false,
       },
       {
         name: "Family gathering",
-        link: "/product",
+        link: "product/family-gathering",
         blank: false,
       },
       {
         name: "Retirement preparation",
-        link: "/product",
+        link: "product/retirement-preparation",
         blank: false,
       },
     ],
@@ -90,7 +90,7 @@ export const footerData = [
       {
         name: "Karir",
         add: " - We're Hiring!",
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/company/peopleshift/jobs/",
         blank: true,
       },
     ],

@@ -20,7 +20,7 @@ const MobileNav: FC<IMobileNavProps> = ({ items, setShowNav, showNav }) => {
         >
           {items?.map((item, index) => (
             <div key={index}>
-              {index === 0 ? (
+              {index === 1 ? (
                 <div>
                   <button
                     onClick={() => setShowProductNav(!showProductNav)}

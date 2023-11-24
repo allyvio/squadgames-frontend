@@ -39,8 +39,7 @@ const WebNav: FC<IWebNavProps> = ({ items, productNav, children }) => {
       {showInfo && (
         <div className="info">
           <p className="text-center">
-            Dapatkan diskon untuk video training soft skill pengembangan diri
-            sekarang!{" "}
+            Konsultasikan kebutuhan team building Anda dengan expertise kami!{" "}
             <Link href="#" target="_blank" className="btn-sm-purple">
               Lihat info
             </Link>
@@ -64,9 +63,9 @@ const WebNav: FC<IWebNavProps> = ({ items, productNav, children }) => {
               {items?.map((item, index) => (
                 <div
                   key={index}
-                  onMouseOver={index === 0 ? () => setShowDropdown(true) : null}
+                  onMouseOver={index === 1 ? () => setShowDropdown(true) : null}
                   onMouseLeave={
-                    index === 0 ? () => setShowDropdown(false) : null
+                    index === 1 ? () => setShowDropdown(false) : null
                   }
                   className="p-1 flex"
                 >

@@ -2,6 +2,13 @@ import { WebNavItem, ProductNavItem } from "@/types";
 
 export const webNavConfig: WebNavItem[] = [
   {
+    title: "Home",
+    href: "/",
+    blank: false,
+    arrow: false,
+    products: [],
+  },
+  {
     title: "Produk",
     href: "/product",
     blank: false,
@@ -16,7 +23,7 @@ export const webNavConfig: WebNavItem[] = [
         href: "/in-venue",
       },
       {
-        title: "Team Building in City",
+        title: "Outing Specials",
         href: "/team-building",
       },
       {
@@ -34,8 +41,15 @@ export const webNavConfig: WebNavItem[] = [
     ],
   },
   {
-    title: "Harga",
-    href: "/price",
+    title: "Gallery",
+    href: "/gallery",
+    blank: false,
+    arrow: false,
+    products: [],
+  },
+  {
+    title: "Study Case",
+    href: "/study-case",
     blank: false,
     arrow: false,
     products: [],
@@ -60,8 +74,8 @@ export const productNavConfig: ProductNavItem = {
     desc: "Agenda penguatan tim yang berfokus pada satu titik lokasi pelatihan",
     href: "/in-venue",
   },
-  "Team Building in City": {
-    title: "Team Building in City",
+  "Outing Specials": {
+    title: "Outing Specials",
     desc: "Agenda penguatan tim sembari berkeliling mengunjungi venue menarik di kota yang Anda inginkan",
     href: "/team-building",
   },

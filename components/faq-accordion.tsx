@@ -8,7 +8,7 @@ import {
 import { faqData } from "@/config/faq";
 import { Collapse } from "react-collapse";
 
-interface IAccordionProps {
+type AccordionProps = {
   section: {
     question: string;
     answer: string;
@@ -16,8 +16,8 @@ interface IAccordionProps {
   isActiveSection: boolean;
   setActiveIndex: Dispatch<SetStateAction<number>>;
   sectionIndex: number;
-}
-const AccordionSection: FC<IAccordionProps> = ({
+};
+const AccordionSection: FC<AccordionProps> = ({
   section,
   isActiveSection,
   setActiveIndex,

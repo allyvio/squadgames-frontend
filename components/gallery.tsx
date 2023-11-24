@@ -22,7 +22,7 @@ const Gallery: FC<Gallery> = ({ images }) => {
       slidesPerView={1}
       // navigation
       // scrollbar
-      loop={true}
+      // loop={true}
       zoom={true}
       pagination={{ clickable: true }}
       // onSwiper={(swiper) => console.log(swiper)}
@@ -48,8 +48,8 @@ const Gallery: FC<Gallery> = ({ images }) => {
             <div className=" border-darkPurple rounded-2xl">
               <Image
                 src={image}
-                width={100}
-                height={100}
+                width={400}
+                height={400}
                 alt="expert"
                 className="w-full h-96 bg-gray-200 object-cover"
               />

@@ -3,13 +3,13 @@ import { caseStudyData } from "@/config/case-study";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { ProductCaseStudy } from "@/types";
+import { type ProductCaseStudy } from "@/lib/types";
 
-interface ICaseStudy {
+type CaseStudyProps = {
   caseStudies: ProductCaseStudy[];
-}
+};
 
-const CaseStudy: FC<ICaseStudy> = ({ caseStudies }) => {
+const CaseStudy: FC<CaseStudyProps> = ({ caseStudies }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
       {caseStudies.map((item, i) => (

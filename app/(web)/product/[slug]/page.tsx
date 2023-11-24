@@ -146,7 +146,11 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
       <section className="space-y-6 pt-[3rem] md:pt-[4rem] pb-[1rem] md:pb-[4rem]">
         <div className="container">
-          <FaqProduct faq={product.faq} />
+          <FaqProduct
+            title={product.faq.title}
+            desc={product.faq.desc}
+            contents={product.faq.contents}
+          />
         </div>
       </section>
 

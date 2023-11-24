@@ -62,14 +62,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/st-photo1.jpg",
+        "/images/photo/st-photo2.jpg",
+        "/images/photo/st-photo3.jpg",
+        "/images/photo/st-photo4.jpg",
       ],
       testimonials: [
         {
@@ -190,14 +186,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/iv-photo1.jpg",
+        "/images/photo/iv-photo2.jpg",
+        "/images/photo/iv-photo3.jpg",
+        "/images/photo/iv-photo4.jpg",
       ],
       testimonials: [
         {
@@ -262,7 +254,7 @@ export const productData: Product[] = [
     contents: {
       meta: "Team Building",
       image: "/images/teambuilding.jpg",
-      title: "Team Building in City",
+      title: "Outing Specials",
       desc: "Kami memahami bahwa belajar lebih baik dilakukan dengan cara yang menarik dan relevan. Oleh karena itu, pendekatan Experiential Learning kami menggabungkan pembelajaran praktis dengan situasi dunia nyata. Tidak ada lagi belajar yang membosankan! Anda akan terlibat dalam simulasi, permainan peran, diskusi kelompok, dan proyek nyata yang memberikan pengalaman mendalam dan tak terlupakan.",
       note: "Hybrid, In person",
       duration: "1-3 Hari",
@@ -318,14 +310,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/tbe-photo1.jpg",
+        "/images/photo/tbe-photo2.jpg",
+        "/images/photo/tbe-photo3.jpg",
+        "/images/photo/tbe-photo4.jpg",
       ],
       testimonials: [
         {
@@ -446,14 +434,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/ce-photo1.jpg",
+        "/images/photo/ce-photo2.jpg",
+        "/images/photo/ce-photo3.jpg",
+        "/images/photo/ce-photo4.jpg",
       ],
       testimonials: [
         {
@@ -574,14 +558,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/fg-photo1.jpg",
+        "/images/photo/ce-photo2.jpg",
+        "/images/photo/ce-photo3.jpg",
+        "/images/photo/ce-photo4.jpg",
       ],
       testimonials: [
         {
@@ -702,14 +682,10 @@ export const productData: Product[] = [
       ],
 
       gallery: [
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
-        "/images/foto1.png",
-        "/images/foto2.jpeg",
-        "/images/foto3.jpeg",
-        "/images/foto4.jpeg",
+        "/images/photo/fg-photo1.jpg",
+        "/images/photo/ce-photo2.jpg",
+        "/images/photo/ce-photo3.jpg",
+        "/images/photo/ce-photo4.jpg",
       ],
       testimonials: [
         {

@@ -9,7 +9,7 @@ import Image from "next/image";
 import { accordionData } from "@/config/accordion";
 import { Collapse } from "react-collapse";
 
-interface IAccordionProps {
+type IAccordionProps = {
   section: {
     title: string;
     icon: any;
@@ -18,7 +18,7 @@ interface IAccordionProps {
   isActiveSection: boolean;
   setActiveIndex: Dispatch<SetStateAction<number>>;
   sectionIndex: number;
-}
+};
 const AccordionSection: FC<IAccordionProps> = ({
   section,
   isActiveSection,

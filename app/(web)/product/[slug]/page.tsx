@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiCheckMark } from "react-icons/gi";
 import { IoLogoWhatsapp } from "react-icons/io";
-import Gallery from "@/components/gallery";
-import CaseStudy from "@/components/case-study";
-import FaqProduct from "@/components/faq-product";
+import Photos from "@/components/product/photos";
+import CaseStudy from "@/components/home/case-study";
+import FaqProduct from "@/components/product/faq-product";
 import "styles/styles.css";
 import { FaUserTag } from "react-icons/fa";
 import { MdTimer } from "react-icons/md";
-import Methods from "@/components/methods";
+import Methods from "@/components/product/methods";
 
 export async function generateStaticParams() {
   return productData.map((data) => {
@@ -128,7 +128,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
       <section className="space-y-6 py-[2rem] md:py-[3rem] ">
         <div className="container">
-          <Gallery images={product.contents.gallery} />
+          <Photos photos={product.contents.gallery} />
         </div>
       </section>
 

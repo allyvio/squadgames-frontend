@@ -17,6 +17,7 @@ type AccordionProps = {
   setActiveIndex: Dispatch<SetStateAction<number>>;
   sectionIndex: number;
 };
+
 const AccordionSection: FC<AccordionProps> = ({
   section,
   isActiveSection,
@@ -27,6 +28,7 @@ const AccordionSection: FC<AccordionProps> = ({
     const nextIndex = isActiveSection ? null : sectionIndex;
     setActiveIndex(nextIndex);
   };
+
   return (
     <div className=" flex flex-col rounded-md border border-gray-300 ">
       <div

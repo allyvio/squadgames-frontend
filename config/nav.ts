@@ -9,7 +9,7 @@ export const webNavConfig: WebNavItem[] = [
     products: [],
   },
   {
-    title: "Produk",
+    title: "Product",
     href: "/product",
     blank: false,
     arrow: true,
@@ -48,16 +48,16 @@ export const webNavConfig: WebNavItem[] = [
     products: [],
   },
   {
-    title: "Study Case",
-    href: "/study-case",
+    title: "Case Studies",
+    href: "/case-studies",
     blank: false,
     arrow: false,
     products: [],
   },
   {
-    title: "Hubungi Kami",
-    href: "https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training",
-    blank: true,
+    title: "Contact",
+    href: "/contact",
+    blank: false,
     arrow: false,
     products: [],
   },
@@ -66,32 +66,32 @@ export const webNavConfig: WebNavItem[] = [
 export const productNavConfig: ProductNavItem = {
   "Softskill Training": {
     title: "Softskill Training",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam odio quas sequi voluptates illo impedit eaque eos voluptatibus at! Nisi in blanditiis alias enim dicta ut similique tenetur. Quia.",
+    desc: "Kami tidak hanya materi in-class, kami memberikan Anda untuk belajar melalui pengalaman nyata. Kami yakin, pengalaman langsung adalah cara terbaik untuk memperkuat keterampilan softskills.",
     href: "/softskill-training",
   },
   "In-Venue Team Building": {
     title: "In-Venue Team Building",
-    desc: "Agenda penguatan tim yang berfokus pada satu titik lokasi pelatihan",
+    desc: "Kami menyelenggarakan acara di berbagai lokasi menarik di dengen venue yang menarik. Kami akan membantu Anda mengatur acara yang memukau dan berkesan.",
     href: "/in-venue",
   },
   "Outing Specials": {
     title: "Outing Specials",
-    desc: "Agenda penguatan tim sembari berkeliling mengunjungi venue menarik di kota yang Anda inginkan",
+    desc: "Anda ingin mengadakan acara tim di kota tertentu? Tidak masalah! Kami akan membawa pengalaman pembelajaran ke kota yang Anda inginkan.",
     href: "/team-building",
   },
   "Corporate Event": {
     title: "Corporate Event",
-    desc: "Agenda penguatan tim sembari berkeliling mengunjungi venue menarik di kota yang Anda inginkan",
+    desc: "Untuk perusahaan yang ingin menyelenggarakan event perusahaan,seperti Corporate Gathering, Perayaan Ulang Tahun, Yearly Meeting. Dengan sentuhan kreatif kami, acara akan sejalan dengan tujuan perusahaan Anda.",
     href: "/corporate-event",
   },
   "Family Gathering": {
     title: "Family Gathering",
-    desc: "Agenda penguatan tim sembari berkeliling mengunjungi venue menarik di kota yang Anda inginkan",
+    desc: "Buatlah pertemuan keluarga Anda menjadi momen istimewa dengan aktivitas yang menghibur dan memperkuat hubungan keluarga.",
     href: "/family-gathering",
   },
   "Retirement Preparation": {
     title: "Retirement Preparation",
-    desc: "Agenda penguatan tim sembari berkeliling mengunjungi venue menarik di kota yang Anda inginkan",
+    desc: "Kami mengerti betapa pentingnya persiapan pensiun. Kami akan membantu Anda mempersiapkan pensiun karyawan perusahaan Anda untuk memasuki masa pensiun dengan percaya diri dan kebahagiaan.",
     href: "/retirement-preparation",
   },
 };

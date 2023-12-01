@@ -11,11 +11,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/zoom";
 
-interface Gallery {
-  images?: any;
-}
+type Photos = any;
 
-const Gallery: FC<Gallery> = ({ images }) => {
+const Photos: FC<Photos> = ({ photos }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Zoom]}
@@ -42,12 +40,12 @@ const Gallery: FC<Gallery> = ({ images }) => {
       }}
       className="mySwiper"
     >
-      {images.map((image, i) => (
+      {photos.map((photo, i) => (
         <SwiperSlide key={i} className="">
           <div className="mb-[2rem] overflow-hidden relative rounded-md">
             <div className=" border-darkPurple rounded-2xl">
               <Image
-                src={image}
+                src={photo}
                 width={400}
                 height={400}
                 alt="expert"
@@ -61,4 +59,4 @@ const Gallery: FC<Gallery> = ({ images }) => {
   );
 };
 
-export default Gallery;
+export default Photos;

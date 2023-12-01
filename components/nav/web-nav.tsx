@@ -7,18 +7,18 @@ import Image from "next/image";
 import useScrollListener from "@/hooks/useScroll";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-import MobileNav from "./mobile-nav";
+import MobileNav from "./mobile/mobile-nav";
 import logo from "@/public/logo.png";
 import { BiSolidDownArrow } from "react-icons/bi";
 import DropdownNav from "./product-nav";
 
-interface IWebNavProps {
+type TWebNavProps = {
   items?: WebNavItem[];
   productNav?: ProductNavItem;
   children?: React.ReactNode;
-}
+};
 
-const WebNav: FC<IWebNavProps> = ({ items, productNav, children }) => {
+const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
   const [navClassList, setNavClassList] = useState([]);
   const scroll = useScrollListener();
   const [showInfo, setShowInfo] = useState(true);
@@ -40,7 +40,7 @@ const WebNav: FC<IWebNavProps> = ({ items, productNav, children }) => {
         <div className="info">
           <p className="text-center">
             Konsultasikan kebutuhan team building Anda dengan expertise kami!{" "}
-            <Link href="#" target="_blank" className="btn-sm-purple">
+            <Link href="/contact-us" className="btn-sm-purple">
               Lihat info
             </Link>
           </p>

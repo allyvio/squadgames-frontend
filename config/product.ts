@@ -348,14 +348,14 @@ export const productData: Product[] = [
       },
     ],
     faq: {
-      title: "Team Building Event in Your Preferred City",
+      title: "Outing Specials",
       desc: "Acara pengembangan tim yang disesuaikan dengan kota pilihan Anda. Kami menciptakan pengalaman tak terlupakan di lokasi yang Anda inginkan, memperkuat kerja tim melalui tantangan yang menarik dan menjelajahi tempat-tempat menarik.",
       contents: [
         {
           id: 1,
           question: "Berapa lama training ini diadakan?",
           answer:
-            "Team Building Event in Your Preferred City adalah training dengan rangkaian kegiatan yang dirancang disesuaikan dengan kebutuhan perusahaan dengan estimasi 1-3 Hari",
+            "Outing Specials adalah training dengan rangkaian kegiatan yang dirancang disesuaikan dengan kebutuhan perusahaan dengan estimasi 1-3 Hari",
         },
         {
           id: 2,

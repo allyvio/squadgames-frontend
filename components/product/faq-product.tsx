@@ -2,9 +2,7 @@ import React, { FC } from "react";
 import FaqProductAccordion from "./faq-product-accordion";
 import { ProductFaq } from "@/types";
 
-type FaqProps = ProductFaq;
-
-const FaqProduct: FC<FaqProps> = ({ title, desc, contents }) => {
+const FaqProduct: FC<ProductFaq> = ({ title, desc, contents }) => {
   return (
     <div className="flex flex-col lg:flex-row justify-between w-full">
       <div className="flex flex-col md:mr-[5rem] mb-10">

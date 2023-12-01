@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import WebFooter from "@/components/web-footer";
-import WebNav from "@/components/web-nav";
+import WebNav from "@/components/nav/web-nav";
 import { webNavConfig, productNavConfig } from "@/config/nav";
+import "styles/styles.css";
 
 interface WebLayoutProps {
   children: React.ReactNode;

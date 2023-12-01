@@ -6,7 +6,7 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { Collapse } from "react-collapse";
-import { type ProductFaq } from "@/lib/types";
+import { type ProductFaq } from "@/types";
 
 type AccordionProps = {
   section: {

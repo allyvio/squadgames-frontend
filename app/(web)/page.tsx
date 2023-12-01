@@ -1,220 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
-import "styles/styles.css";
-import ReasonCard from "@/components/reason-card";
-import Emoticon from "@/components/emoticon";
-import Accordion from "@/components/accordion";
-import logoWhite from "@/public/logo-white.png";
-import logo from "@/public/logo.png";
-import GamesCard from "@/components/games-card";
-import heroImg from "@/public/images/heroimage.png";
-import chart from "@/public/images/chart.png";
-import Company from "@/components/company";
-import ExpertCard from "@/components/expert-card";
-import { IoLogoWhatsapp } from "react-icons/io";
-import Faq from "@/components/faq";
-import Program from "@/components/program";
+import Faq from "@/components/home/faq/faq";
+import Hero from "@/components/home/hero";
+import Fact from "@/components/home/fact";
+import Solution from "@/components/home/solution";
+import Why from "@/components/home/why";
+import Games from "@/components/home/games";
+import TrustedBy from "@/components/home/trusted-by";
+import MeetTheExpert from "@/components/home/meet-the-expert";
+import Cta from "@/components/home/cta";
 
 export default function Home() {
   return (
     <>
-      <section className="space-y-6 pt-[5rem] md:pt-[10rem] bg-hero-gradient">
-        <div className="flex-row">
-          <div className="container flex-row lg:flex items-start justify-start">
-            <div className="flex flex-col">
-              <h1 className="leading-[0.9] tracking-tighter text-[4rem] md:text-[5rem] font-bold mb-5 text-white">
-                <span className="text-orange">Harness Your</span> <br />{" "}
-                Team&apos;s True <br /> Potential
-              </h1>
-              <p className="mb-5 max-w-[85%] text-white">
-                Solusi end-to-end untuk mengembangkan tim anda lewat berbagai
-                aktivitas yang asik, beda, dan insightful
-              </p>
-              <div className="mb-[3rem]">
-                <Link
-                  href="/"
-                  target="_blank"
-                  className="btn-md-orange md:btn-orange"
-                >
-                  Selengkapnya
-                </Link>
-              </div>
-            </div>
-            <Image
-              src={heroImg}
-              alt="image"
-              className="w-[450px] md:w-[500px] lg:w-[600px] xl:w-[700px] lg:mt-[-3rem] pb-[3rem]"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6 bg-[#fff8e9] pt-[3rem] md:pt-[5rem]">
-        <div className="container flex-row justify-center items-center pb-[1rem] md:pb-[2rem]">
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-3 md:mb-0 md:max-w-[60%] mx-auto">
-            Sebagai seorang manager{" "}
-            <span className="text-darkOrange">
-              apakah Anda pernah merasakan hal ini?
-            </span>
-          </h2>
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start ">
-            <Emoticon />
-          </div>
-        </div>
-
-        <div className="container pb-[4rem] md:pb-[6rem]">
-          <div className="big-card max-w-fit mx-auto">
-            <div className="flex flex-col w-[300px] md:w-auto">
-              <h2 className="text-center text-xl md:text-3xl font-bold mb-5 mx-auto">
-                Faktanya... <br /> Anda tidak sendirian.{" "}
-              </h2>
-              <p className="text-center mb-10 ">
-                Banyak HR di perusahaan lain merasakan hal yang sama
-              </p>
-            </div>
-
-            <div className="flex-col">
-              <Image
-                src={chart}
-                alt="chart"
-                className="max-w-[300px] md:max-w-[500px] mb-5"
-              />
-              <p className="text-center text-sm text-gray-500">
-                What HR Professionals want in their corporate training program{" "}
-                <br /> - Gamelearn
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6 py-[3rem] md:py-[4rem] big-card-bg-gradient">
-        <div className="container md:pb-[3rem] text-white">
-          <p className="text-center text-lg mb-2">Solusi dari Squadgames</p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mx-auto md:max-w-[65%]">
-            Squadgames akan membantu Anda merancang team building training{" "}
-            <span className="text-orange"> yang tidak biasa</span>
-          </h2>
-        </div>
-
-        <div className="container flex justify-center items-center lg:px-[3rem] ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 content-between gap-10">
-            <div className="flex flex-col md:w-[90%]">
-              <Image
-                src={logoWhite}
-                alt="squadgames"
-                className="max-w-[250px] my-5"
-              />
-              <p className="text-lg text-white mb-5 md:mb-10">
-                Squadgames menciptakan puluhan produk menarik berbasis
-                experiential learning, yang memunculkan berbagai produk mulai
-                dari onboarding programs, professional competency training,
-                hingga penciptaan learning process perusahaan yang komprehensif
-                dan sesuai dengan kondisi yang dihadapi dunia SDM saat ini.
-              </p>
-              <div>
-                <Link
-                  href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
-                  target="_blank"
-                  className="btn-md-orange md:btn-orange"
-                >
-                  Konsultasi Sekarang
-                </Link>
-              </div>
-            </div>
-            <Accordion />
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6 pt-[3rem] md:pt-[5rem] pb-[2rem] md:pb-[5rem]">
-        <div className="container flex-row justify-center items-center">
-          <p className="text-center text-lg mb-2">Mengapa Squadgames?</p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[5rem] mx-auto md:max-w-[70%]">
-            Solusi training terbaru untuk meningkatkan potensi tim Anda dengan{" "}
-            <span className="text-darkOrange">bermain bersama</span>
-          </h2>
-          <ReasonCard />
-        </div>
-      </section>
-
-      <section className="space-y-6 py-[3rem] md:py-[5rem] bg-games-gradient">
-        <div className="container flex-row justify-center items-center">
-          <p className="text-center text-lg mb-2 text-white">
-            Training tapi bermain games
-          </p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[3rem] md:mb-[5rem] mx-auto md:max-w-[70%] text-white">
-            Games yang dirancang untuk meningkatkan soliditas tim dengan
-            aktivitas yang menyenangkan
-          </h2>
-          <GamesCard />
-        </div>
-      </section>
-
-      <section className="space-y-6 pt-[4rem] md:pt-[7rem] pb-[3rem] md:pb-[6rem]">
-        <div className="container flex-row justify-center items-center">
-          <h3 className="text-center text-lg md:text-xl font-medium">
-            Telah dipercaya 500+ perusahaan di berbagai industri
-          </h3>
-        </div>
-        <div className="container relative">
-          <Company />
-        </div>
-      </section>
-
-      {/* <section className="space-y-6 pt-[2rem] pb-[1rem] md:pb-[4rem]">
-        <div className="container flex-row justify-center items-center">
-          <p className="text-center text-lg mb-2 ">Program Team Building</p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[2rem] md:mb-[4rem] mx-auto md:max-w-[70%] ">
-            Pilih program yang sesuai dengan kebutuhan Anda
-          </h2>
-          <Program />
-        </div>
-      </section> */}
-
-      <section className="space-y-6 pt-[3rem] md:pb-[3rem]">
-        <div className="container justify-center items-center">
-          <p className="text-center text-lg mb-2 ">
-            Bertemu ahli di setiap bidang
-          </p>
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[2rem] md:mb-[4rem] mx-auto md:max-w-[70%] ">
-            Para ahli yang akan menemani Anda bermain dan berakselerasi bersama
-          </h2>
-          <ExpertCard />
-        </div>
-      </section>
-
-      <section className="space-y-6 pt-[3rem] md:pt-[4rem] pb-[1rem] md:pb-[4rem]">
-        <div className="container">
-          <Faq />
-        </div>
-      </section>
-
-      <section className="space-y-6 py-[2rem] mb-[1rem]">
-        <div className="container">
-          <Image src={logo} alt="logo" className="w-[150px] mx-auto mb-5" />
-          <h2 className="text-center text-2xl md:text-3xl font-bold mb-[1rem] mx-auto md:max-w-[70%]">
-            Siap untuk bermain bersama Squadgames?
-          </h2>
-          <p className="text-center text-base font-light mb-2 mx-auto md:w-[70%] lg:w-[50%]">
-            Tingkatkan performa tim Anda lewat training yang menyenangkan dengan
-            berbagai games dari Squadgames.
-          </p>
-
-          <div className="flex justify-center mt-[2rem]">
-            <Link
-              href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
-              target="_blank"
-              className="btn-md-orange"
-            >
-              <span className="text-white text-xl mr-2">
-                <IoLogoWhatsapp />
-              </span>
-              WhatsApp Kami
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Hero />
+      <Fact />
+      <Solution />
+      <Why />
+      <Games />
+      <TrustedBy />
+      <MeetTheExpert />
+      <Faq />
+      <Cta />
     </>
   );
 }

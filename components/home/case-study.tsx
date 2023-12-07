@@ -3,7 +3,7 @@ import { caseStudyData } from "@/config/case-study";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { type ProductCaseStudy } from "@/lib/types";
+import { type ProductCaseStudy } from "@/types";
 
 type CaseStudyProps = {
   caseStudies: ProductCaseStudy[];

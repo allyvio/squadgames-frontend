@@ -9,7 +9,7 @@ export default function Form() {
   const [isLoading, setIsLoading] = useState(false);
 
   const notify = () =>
-    toast.info("Message sent! \r\n I will reach you back shortly");
+    toast.info("Message sent! \r\n We will reach you back shortly");
   const form: any = useRef();
 
   const sendEmail = (e: any) => {
@@ -121,32 +121,49 @@ export default function Form() {
         <div className="flex flex-col md:flex-row w-full justify-between gap-5">
           <div className="flex flex-col w-full">
             <label>Number of employee*</label>
-            <input
-              type="text"
-              name="number_employee"
+            <select
+              name="number-of-employee"
+              id="number-of-employee"
               placeholder="Number of training participant"
               className="input"
               required
               disabled={isLoading ? true : false}
-            />
+            >
+              <option value="1-10">1-10</option>
+              <option value="10-50">10-50</option>
+              <option value="50-100">50-100</option>
+              <option value=">100">&gt;100</option>
+            </select>
           </div>
           <div className="flex flex-col w-full">
             <label>Program*</label>
-            <input
-              type="text"
+            <select
               name="program"
+              id="program"
               placeholder="What's your training needs"
               className="input"
               required
               disabled={isLoading ? true : false}
-            />
+            >
+              <option value="Softskill Training">Softskill Training</option>
+              <option value="In Venue Team Building">
+                In Venue Team Building
+              </option>
+              <option value="Outing Specials">Outing Specials</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Family Gathering">Family Gathering</option>
+              <option value="Retirement Preparation">
+                Retirement Preparation
+              </option>
+            </select>
           </div>
         </div>
 
         <button
           type="submit"
           className="bg-orange p-3 text-black font-semibold rounded-md hover:bg-darkOrange transition ease-out duration-200"
-          disabled={isLoading ? true : false}
+          // disabled={isLoading ? true : false}
+          disabled
         >
           {isLoading ? "SUBMITTING..." : "SUBMIT"}
         </button>

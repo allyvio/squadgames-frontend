@@ -9,8 +9,9 @@ import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import MobileNav from "./mobile/mobile-nav";
 import logo from "@/public/logo.png";
-import { BiSolidDownArrow } from "react-icons/bi";
-import DropdownNav from "./product-nav";
+import { IoIosArrowDown } from "react-icons/io";
+import DropdownNav from "./dropdown-nav";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 type TWebNavProps = {
   items?: WebNavItem[];
@@ -36,11 +37,12 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
 
   return (
     <div className={`web-header ${!showNav ? navClassList.join(" ") : null}`}>
+      {/* ========== info ========== */}
       {showInfo && (
         <div className="info">
           <p className="text-center">
             Konsultasikan kebutuhan team building Anda dengan expertise kami!{" "}
-            <Link href="/contact-us" className="btn-sm-purple">
+            <Link href="/contact" className="btn-sm-purple">
               Lihat info
             </Link>
           </p>
@@ -55,9 +57,12 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
       )}
       <header className="web-nav">
         <div className="container flex justify-between items-center">
+          {/* ========== logo ========== */}
           <Link href="/" className="flex" onClick={() => setShowNav(false)}>
             <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
           </Link>
+
+          {/* ========== nav menu ========== */}
           {items?.length ? (
             <nav className="hidden md:flex ">
               {items?.map((item, index) => (
@@ -78,7 +83,7 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
                     {item.title}
 
                     {item.arrow && (
-                      <BiSolidDownArrow className="text-[10px] ml-1" />
+                      <IoIosArrowDown className="text-[12px] ml-1" />
                     )}
                   </Link>
                 </div>
@@ -92,6 +97,7 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
             setShowDropdown={setShowDropdown}
           />
 
+          {/* ========== hamburger ========== */}
           <div className="bg-transparent w-10 h-10 flex justify-center items-center">
             <button
               className="text-darkPurple text-2xl p-2 md:hidden"
@@ -100,7 +106,25 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
               {showNav ? <AiOutlineClose /> : <FiMenu />}
             </button>
           </div>
+
+          {/* ========== hotline ========== */}
+          <div className="hidden md:block">
+            <div className="flex justify-center">
+              <Link
+                href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
+                target="_blank"
+                className="btn-md-orange"
+              >
+                <span className="text-white text-xl mr-2">
+                  <IoLogoWhatsapp />
+                </span>
+                WhatsApp Kami
+              </Link>
+            </div>
+          </div>
         </div>
+
+        {/* ========== mobile nav ========== */}
         {showNav && (
           <MobileNav items={items} showNav={showNav} setShowNav={setShowNav} />
         )}

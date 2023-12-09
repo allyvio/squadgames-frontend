@@ -31,18 +31,6 @@ const Gallery: FC<TGalleryProps> = ({ galleries }) => {
               <p>{gallery.fields.title}</p>
             </div>
           ))}
-          {/* {photos.map((photo, index) => (
-            <div key={index}>
-              <div
-                className="photo"
-                // key={index}
-                onClick={() => setShowPhoto(photo.imgSrc)}
-              >
-                <Image src={photo.imgSrc} alt="photo" />
-              </div>
-              <p>{photo.title}</p>
-            </div>
-          ))} */}
         </div>
         <div
           className="photo-popup"

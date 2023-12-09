@@ -36,7 +36,7 @@ const Solution = () => {
                 target="_blank"
                 className="btn-md-orange md:btn-orange"
               >
-                Konsultasi Sekarang
+                Konsultasi Gratis Sekarang
               </Link>
             </div>
           </div>

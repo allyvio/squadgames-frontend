@@ -6,7 +6,7 @@ import Link from "next/link";
 import { GiCheckMark } from "react-icons/gi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Photos from "@/components/product/photos";
-import CaseStudy from "@/components/home/case-study";
+import CaseStudy from "@/components/product/case-study";
 import FaqProduct from "@/components/product/faq-product";
 import "styles/styles.css";
 import { FaUserTag } from "react-icons/fa";

@@ -12,24 +12,24 @@ export const gamesData = [
     pic: foto1,
     logo: classic,
     desc: "Bayangkan amazing race, video tiktok lucu, dan pencarian harta karun digabungkan dalam sebuah games yang dibungkus dengan sentuhan teknologi...",
-    link: "/",
+    link: "/case-studies",
   },
   {
     pic: foto2,
     logo: challenge,
     desc: "Hanya dalam 24 jam, Anda diminta untuk menyelesaikan 4 tantangan dengan resources berupa waktu, tenaga, dan dana yang terbatas...",
-    link: "/",
+    link: "/case-studies",
   },
   {
     pic: foto3,
     logo: heros,
     desc: "Anda akan diajak menyelami profil seorang informal hero dengan menginap dan beraktivitas bersama. Game ini meningkatkan soliditas tim sekaligus menumbuhkan sikap empati...",
-    link: "/",
+    link: "/case-studies",
   },
   {
     pic: foto4,
     logo: lawn,
     desc: "Menyatu dengan alam. Saatnya bermain bersama di padang rumput hijau. Pastinya dengan challenge yang tidak pernah Anda bayangkan...",
-    link: "/",
+    link: "/case-studies",
   },
 ];

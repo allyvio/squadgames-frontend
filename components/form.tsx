@@ -161,7 +161,7 @@ export default function Form() {
 
         <button
           type="submit"
-          className="bg-orange p-3 text-black font-semibold rounded-md hover:bg-darkOrange transition ease-out duration-200"
+          className="btn-md-orange"
           // disabled={isLoading ? true : false}
           disabled
         >

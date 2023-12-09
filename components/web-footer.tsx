@@ -38,10 +38,18 @@ const WebFooter = () => {
       </div>
       <div className="container flex flex-col md:flex-row text-white border-t border-t-[#D9BCFF] py-[1rem]">
         <div className="flex gap-3 text-white text-3xl mr-[10rem] mb-[2rem]">
-          <Link href="https://linkedin.com" target="_blank" className="">
+          <Link
+            href="https://www.linkedin.com/company/peopleshift"
+            target="_blank"
+            className=""
+          >
             <AiFillLinkedin />
           </Link>
-          <Link href="https://instagram.com" target="_blank" className="">
+          <Link
+            href="https://www.instagram.com/squadgames.id"
+            target="_blank"
+            className=""
+          >
             <AiFillInstagram />
           </Link>
           <Link href="https://facebook.com" target="_blank" className="">

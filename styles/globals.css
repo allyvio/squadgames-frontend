@@ -39,7 +39,7 @@
 }
 
 .info {
-  @apply flex gap-[10px] justify-center items-center bg-white w-full my-auto text-center p-[1rem] border-b border-[#ededed];
+  @apply flex gap-[10px] justify-center items-center bg-white w-full my-auto text-center p-[1rem];
 }
 
 .input {

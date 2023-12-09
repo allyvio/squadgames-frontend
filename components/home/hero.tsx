@@ -17,7 +17,7 @@ const Hero = () => {
               Solusi end-to-end untuk mengembangkan tim anda lewat berbagai
               aktivitas yang asik, beda, dan insightful
             </p>
-            <div className="mb-[3rem]">
+            {/* <div className="mb-[3rem]">
               <Link
                 href="/"
                 target="_blank"
@@ -25,7 +25,7 @@ const Hero = () => {
               >
                 Selengkapnya
               </Link>
-            </div>
+            </div> */}
           </div>
           <Image
             src={heroImg}

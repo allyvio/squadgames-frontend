@@ -4,53 +4,60 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { type ProductCaseStudy } from "@/types";
+import { MaxChar } from "@/utils/max-char";
+import { DateTime } from "luxon";
 
-const CaseStudyCard = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      image: "/images/tech1.jpeg",
-      title: "PLN Muda",
-      desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
-      href: "link",
-    },
-    {
-      id: 2,
-      image: "/images/tech2.jpeg",
-      title: "Pertamina",
-      desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
-      href: "link",
-    },
-    {
-      id: 3,
-      image: "/images/tech3.jpg",
-      title: "Bappenas",
-      desc: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque hic, cupiditate saepe praesentium facilis ex.",
-      href: "link",
-    },
-  ];
+type TCaseStudyProps = any;
+
+const CaseStudyCard: FC<TCaseStudyProps> = ({ data }) => {
+  const sortedData = data?.sort(
+    (a, b) =>
+      DateTime.fromISO(b.fields.createdAt.toLocaleString()).toMillis() -
+      DateTime.fromISO(a.fields.createdAt.toLocaleString()).toMillis()
+  );
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-      {caseStudies.map((item, i) => (
+      {sortedData?.map((item, i) => (
         <div
           key={i}
           className="bg-white rounded-2xl overflow-hidden shadow-md relative"
         >
           <Image
-            src={item.image}
-            alt="photo"
-            width={100}
-            height={100}
+            src={`https:${item.fields.image.fields.file.url}`}
+            width={item.fields.image.fields.file.details.image.width}
+            height={item.fields.image.fields.file.details.image.height}
+            alt="image"
             className="w-full h-56 object-cover"
           />
+
           <div className="py-4 px-10 flex flex-col">
-            <p className="text-lg font-bold mb-2">{item.title}</p>
-            <p>{item.desc}</p>
+            <div className="min-h-[100px] text-purple">
+              <div className="flex flex-wrap gap-2 mb-2">
+                <span className="text-sm text-center py-1 px-2 border border-purple rounded">
+                  {MaxChar(item.fields.product_name?.fields?.name, 37)}
+                </span>
+
+                {item.fields.games?.map((game, index) => (
+                  <span
+                    key={index}
+                    className="text-sm text-center py-1 px-2 border border-purple rounded"
+                  >
+                    {game.fields.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <p className="text-lg font-semibold mb-2">
+              Case study: {item.fields.client}
+            </p>
+            <p>{item.fields.title}</p>
           </div>
           <div className="flex py-5 px-10 text-darkPurple">
             <Link
-              href={item.href}
+              href={`/case-studies/${item.fields.title
+                .toLowerCase()
+                .replaceAll(" ", "-")}`}
               className="flex items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
             >
               <span className="hover:underline">Lihat studi kasus</span>

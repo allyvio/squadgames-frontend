@@ -4,7 +4,7 @@ import React, { FC, useState, useEffect } from "react";
 import { ProductNavItem, WebNavItem } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
-import useScrollListener from "@/hooks/useScroll";
+import useScrollListener from "@/hooks/use-scroll";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import MobileNav from "./mobile/mobile-nav";
@@ -57,45 +57,53 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
       )}
       <header className="web-nav">
         <div className="container flex justify-between items-center">
-          {/* ========== logo ========== */}
-          <Link href="/" className="flex" onClick={() => setShowNav(false)}>
-            <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
-          </Link>
+          <div className="flex items-center">
+            {/* ========== logo ========== */}
+            <Link
+              href="/"
+              className="flex mr-10"
+              onClick={() => setShowNav(false)}
+            >
+              <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
+            </Link>
 
-          {/* ========== nav menu ========== */}
-          {items?.length ? (
-            <nav className="hidden md:flex ">
-              {items?.map((item, index) => (
-                <div
-                  key={index}
-                  onMouseOver={index === 1 ? () => setShowDropdown(true) : null}
-                  onMouseLeave={
-                    index === 1 ? () => setShowDropdown(false) : null
-                  }
-                  className="p-1 flex"
-                >
-                  <Link
-                    href={item.href}
-                    target={`${item.blank ? "_blank" : "_self"}`}
-                    onClick={() => setShowDropdown(false)}
-                    className="py-2 px-6 hover:text-darkPurple flex items-center"
+            {/* ========== nav menu ========== */}
+            {items?.length ? (
+              <nav className="hidden md:flex ">
+                {items?.map((item, index) => (
+                  <div
+                    key={index}
+                    onMouseOver={
+                      index === 1 ? () => setShowDropdown(true) : null
+                    }
+                    onMouseLeave={
+                      index === 1 ? () => setShowDropdown(false) : null
+                    }
+                    className="p-1 flex"
                   >
-                    {item.title}
+                    <Link
+                      href={item.href}
+                      target={`${item.blank ? "_blank" : "_self"}`}
+                      onClick={() => setShowDropdown(false)}
+                      className="py-2 px-4 hover:text-darkPurple flex items-center"
+                    >
+                      {item.title}
 
-                    {item.arrow && (
-                      <IoIosArrowDown className="text-[12px] ml-1" />
-                    )}
-                  </Link>
-                </div>
-              ))}
-            </nav>
-          ) : null}
+                      {item.arrow && (
+                        <IoIosArrowDown className="text-[12px] ml-1" />
+                      )}
+                    </Link>
+                  </div>
+                ))}
+              </nav>
+            ) : null}
 
-          <DropdownNav
-            productNav={productNav}
-            showDropdown={showDropdown}
-            setShowDropdown={setShowDropdown}
-          />
+            <DropdownNav
+              productNav={productNav}
+              showDropdown={showDropdown}
+              setShowDropdown={setShowDropdown}
+            />
+          </div>
 
           {/* ========== hamburger ========== */}
           <div className="bg-transparent w-10 h-10 flex justify-center items-center">

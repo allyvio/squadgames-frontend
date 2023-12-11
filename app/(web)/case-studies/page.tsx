@@ -4,8 +4,20 @@ import Link from "next/link";
 import heroImage from "@/public/images/team_monitor.png";
 import { IoLogoWhatsapp } from "react-icons/io";
 import CaseStudyCard from "@/components/case-study-card";
+import { client } from "@/lib/contentful";
 
-const CaseStudies = () => {
+async function getData() {
+  const res = await client.getEntries({ content_type: "caseStudy" });
+
+  if (res.errors) {
+    throw new Error("Failed to fetch data");
+  }
+  return res;
+}
+
+const CaseStudies = async () => {
+  const data = await getData();
+
   return (
     <>
       <section className="space-y-6 py-[3rem] md:py-[5rem]">
@@ -50,7 +62,7 @@ const CaseStudies = () => {
           <h2 className="text-center text-2xl font-semibold mt-5 mb-[3rem]">
             Telah dipercaya 500+ perusahaan di berbagai industri
           </h2>
-          <CaseStudyCard />
+          <CaseStudyCard data={data.items} />
         </div>
       </section>
     </>

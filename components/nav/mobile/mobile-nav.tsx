@@ -24,7 +24,7 @@ const MobileNav: FC<IMobileNavProps> = ({ items, setShowNav, showNav }) => {
                 <div>
                   <button
                     onClick={() => setShowProductNav(!showProductNav)}
-                    className="flex items-center justify-between my-0 mx-auto w-full py-3 border-b border-[#ddd] border-t 
+                    className="flex items-center justify-between my-0 mx-auto w-full py-3 border-b border-[#ddd]
                 "
                   >
                     {item.title}{" "}

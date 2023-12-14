@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import heroImage from "@/public/images/team_monitor.png";
 import { IoLogoWhatsapp } from "react-icons/io";
-import CaseStudyCard from "@/components/case-study-card";
+import CaseStudiesCard from "@/components/case-studies-card";
 import { client } from "@/lib/contentful";
 
 async function getData() {
@@ -57,12 +57,12 @@ const CaseStudies = async () => {
       </section>
 
       {/* ===== case study ===== */}
-      <section className="space-y-6 py-[3rem] bg-[#f1f5f9]">
+      <section className="space-y-6 py-[3rem] bg-baby">
         <div className="container py-5">
           <h2 className="text-center text-2xl font-semibold mt-5 mb-[3rem]">
             Telah dipercaya 500+ perusahaan di berbagai industri
           </h2>
-          <CaseStudyCard data={data.items} />
+          <CaseStudiesCard data={data.items} />
         </div>
       </section>
     </>

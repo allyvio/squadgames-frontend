@@ -10,7 +10,7 @@ export const webNavConfig: WebNavItem[] = [
   },
   {
     title: "Product",
-    href: "/product",
+    href: "/",
     blank: false,
     arrow: true,
     products: [

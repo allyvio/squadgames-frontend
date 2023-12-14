@@ -7,9 +7,9 @@ import { type ProductCaseStudy } from "@/types";
 import { MaxChar } from "@/utils/max-char";
 import { DateTime } from "luxon";
 
-type TCaseStudyProps = any;
+type TCaseStudiesProps = any;
 
-const CaseStudyCard: FC<TCaseStudyProps> = ({ data }) => {
+const CaseStudiesCard: FC<TCaseStudiesProps> = ({ data }) => {
   const sortedData = data?.sort(
     (a, b) =>
       DateTime.fromISO(b.fields.createdAt.toLocaleString()).toMillis() -
@@ -31,40 +31,40 @@ const CaseStudyCard: FC<TCaseStudyProps> = ({ data }) => {
             className="w-full h-56 object-cover"
           />
 
-          <div className="py-4 px-10 flex flex-col">
-            <div className="min-h-[100px] text-purple">
-              <div className="flex flex-wrap gap-2 mb-2">
-                <span className="text-sm text-center py-1 px-2 border border-purple rounded">
+          <div className="py-4 px-10 flex flex-col justify-between h-auto">
+            <div className="h-auto">
+              <div className="flex flex-wrap gap-2 mb-2 text-purple">
+                {/* <span className="text-sm text-center py-1 px-2 border border-purple rounded">
                   {MaxChar(item.fields.product_name?.fields?.name, 37)}
-                </span>
+                </span> */}
 
                 {item.fields.games?.map((game, index) => (
                   <span
                     key={index}
-                    className="text-sm text-center py-1 px-2 border border-purple rounded"
+                    className="text-sm text-center py-1 px-2 border border-purple rounded "
                   >
                     {game.fields.name}
                   </span>
                 ))}
               </div>
+              <p className="text-lg font-semibold mb-2 min-h-[70px]">
+                Case study: {item.fields.product_name.fields.name}
+              </p>
+              <p className="min-h-[100px]">{item.fields.title}</p>
             </div>
-            <p className="text-lg font-semibold mb-2">
-              Case study: {item.fields.client}
-            </p>
-            <p>{item.fields.title}</p>
-          </div>
-          <div className="flex py-5 px-10 text-darkPurple">
-            <Link
-              href={`/case-studies/${item.fields.title
-                .toLowerCase()
-                .replaceAll(" ", "-")}`}
-              className="flex items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
-            >
-              <span className="hover:underline">Lihat studi kasus</span>
-              <span className="text-lg scale-x-150">
-                <HiArrowLongRight />
-              </span>
-            </Link>
+            <div className="flex text-darkPurple">
+              <Link
+                href={`/case-studies/${item.fields.title
+                  .toLowerCase()
+                  .replaceAll(" ", "-")}`}
+                className="flex items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
+              >
+                <span className="hover:underline">Lihat studi kasus</span>
+                <span className="text-lg scale-x-150">
+                  <HiArrowLongRight />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       ))}
@@ -72,4 +72,4 @@ const CaseStudyCard: FC<TCaseStudyProps> = ({ data }) => {
   );
 };
 
-export default CaseStudyCard;
+export default CaseStudiesCard;

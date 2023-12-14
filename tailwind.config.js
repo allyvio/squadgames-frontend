@@ -18,6 +18,7 @@ module.exports = {
         pink: "#FFB1D2",
         green: "#96D495",
         yellow: "#FFCC4A",
+        baby: "#f1f5f9",
       },
     },
     container: {

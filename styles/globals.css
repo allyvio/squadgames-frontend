@@ -46,6 +46,26 @@
   @apply py-2 px-3 rounded mt-1 bg-none outline-orange;
 }
 
+.training-score {
+  @apply flex flex-col justify-center text-center w-full md:w-[33,3%] py-5 px-10 border;
+}
+
+.training-score span {
+  @apply text-4xl font-semibold mb-2;
+}
+
+.sidebar-article {
+  @apply flex flex-col md:mt-10 md:w-[30%] md:sticky top-[100px] md:h-[100dvh] md:pr-10;
+}
+
+.sidebar-article div {
+  @apply flex-col mb-5;
+}
+
+.sidebar-article h5 {
+  @apply font-bold mb-1;
+}
+
 .web-nav {
   @apply py-1 sticky z-40 top-0 text-center bg-white;
 }

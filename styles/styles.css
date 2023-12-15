@@ -1,3 +1,7 @@
+.markdown > * {
+  all: revert;
+}
+
 .bg-hero-gradient {
   background: rgb(171, 112, 248);
   background: linear-gradient(

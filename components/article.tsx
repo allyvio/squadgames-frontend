@@ -1,12 +1,9 @@
 import React, { FC } from "react";
-import { notFound } from "next/navigation";
-import { client } from "@/lib/contentful";
-import RichText from "@/components/rich-text";
-import { DateTime } from "luxon";
 import Image from "next/image";
 import Link from "next/link";
 import OtherCaseStudy from "./other-case-study";
 import dynamic from "next/dynamic";
+import Markdown from "react-markdown";
 
 type TArticleProps = {
   article: any;
@@ -39,7 +36,7 @@ const Article: FC<TArticleProps> = ({ article }) => {
             width={article.fields.image.fields.file.details.image.width}
             height={article.fields.image.fields.file.details.image.height}
             alt="image"
-            className="w-full md:w-[50%] h-[23rem] object-cover"
+            className="w-full md:w-[50%] h-[23rem] object-cover rounded-md"
           />
         </div>
 
@@ -115,13 +112,13 @@ const Article: FC<TArticleProps> = ({ article }) => {
 
           {/* ===== article ===== */}
           <div className="flex flex-col md:w-[70%] mt-10">
-            <div className="h-56 md:h-96 w-full mb-10">
+            <div className="h-56 md:h-96 w-full mb-10 rounded-md relative overflow-hidden">
               <YoutubePlayer url={article.fields.video} />
             </div>
             <div className="flex md:w-[80%] m-auto text-center font-medium italic text-lg mb-10">
               <p>{`"${article.fields.clientTesti}"`}</p>
             </div>
-            <RichText content={article.fields.article} />
+            <Markdown className="markdown">{article.fields.article}</Markdown>
           </div>
         </div>
       </div>

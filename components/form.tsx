@@ -12,16 +12,16 @@ export default function Form() {
     toast.info("Message sent! \r\n We will reach you back shortly");
   const form: any = useRef();
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
 
     emailjs
       .sendForm(
-        "service_8ln3gjg",
-        "template_uonm3vb",
+        "service_e4nmbic",
+        "template_5479xed",
         form.current,
-        "9aYefTHRkGOeaGETQ"
+        "B1eGvn1cD85JEM9_C"
       )
       .then(
         (result) => {
@@ -122,13 +122,13 @@ export default function Form() {
           <div className="flex flex-col w-full">
             <label>Number of employee*</label>
             <select
-              name="number-of-employee"
-              id="number-of-employee"
-              placeholder="Number of training participant"
+              name="number_of_employee"
+              id="number_of_employee"
               className="input"
               required
               disabled={isLoading ? true : false}
             >
+              <option value="">Select your number</option>
               <option value="1-10">1-10</option>
               <option value="10-50">10-50</option>
               <option value="50-100">50-100</option>
@@ -140,11 +140,11 @@ export default function Form() {
             <select
               name="program"
               id="program"
-              placeholder="What's your training needs"
               className="input"
               required
               disabled={isLoading ? true : false}
             >
+              <option value="">Select your program</option>
               <option value="Softskill Training">Softskill Training</option>
               <option value="In Venue Team Building">
                 In Venue Team Building
@@ -162,15 +162,14 @@ export default function Form() {
         <button
           type="submit"
           className="btn-md-orange"
-          // disabled={isLoading ? true : false}
-          disabled
+          disabled={isLoading ? true : false}
         >
           {isLoading ? "SUBMITTING..." : "SUBMIT"}
         </button>
       </form>
       <ToastContainer
         position="top-right"
-        autoClose={6000}
+        autoClose={5000}
         closeOnClick={false}
         hideProgressBar={true}
         theme="colored"

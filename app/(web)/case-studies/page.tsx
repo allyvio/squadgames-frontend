@@ -20,7 +20,7 @@ const CaseStudies = async () => {
 
   return (
     <>
-      <section className="space-y-6 py-[3rem] md:py-[5rem]">
+      <section className="space-y-6 py-[2rem] md:mt-10">
         <div className="flex-row">
           <div className="container flex flex-col md:flex-row justify-between">
             <div className="flex flex-col md:w-[60%]">

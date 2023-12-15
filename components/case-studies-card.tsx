@@ -34,10 +34,6 @@ const CaseStudiesCard: FC<TCaseStudiesProps> = ({ data }) => {
           <div className="py-4 px-10 flex flex-col justify-between h-auto">
             <div className="h-auto">
               <div className="flex flex-wrap gap-2 mb-2 text-purple">
-                {/* <span className="text-sm text-center py-1 px-2 border border-purple rounded">
-                  {MaxChar(item.fields.product_name?.fields?.name, 37)}
-                </span> */}
-
                 {item.fields.games?.map((game, index) => (
                   <span
                     key={index}
@@ -57,9 +53,9 @@ const CaseStudiesCard: FC<TCaseStudiesProps> = ({ data }) => {
                 href={`/case-studies/${item.fields.title
                   .toLowerCase()
                   .replaceAll(" ", "-")}`}
-                className="flex items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
+                className="flex py-3 items-center gap-2 hover:translate-x-2 ease-in-out duration-300 hover:underline"
               >
-                <span className="hover:underline">Lihat studi kasus</span>
+                <span>Lihat studi kasus</span>
                 <span className="text-lg scale-x-150">
                   <HiArrowLongRight />
                 </span>

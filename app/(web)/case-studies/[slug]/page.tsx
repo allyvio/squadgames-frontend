@@ -26,8 +26,8 @@ export async function generateMetadata({
   );
 
   return {
-    title: article.fields.title.toString(),
-    description: article.fields.trainingDesc.toString(),
+    title: article?.fields?.title?.toString(),
+    description: article?.fields?.trainingDesc?.toString(),
   };
 }
 

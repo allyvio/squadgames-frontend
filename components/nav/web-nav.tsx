@@ -64,7 +64,11 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
               className="flex mr-10"
               onClick={() => setShowNav(false)}
             >
-              <Image src={logo} alt="squadgames" className="w-auto h-[35px]" />
+              <Image
+                src={logo}
+                alt="squadgames"
+                className="w-auto h-[25px] md:h-[35px]"
+              />
             </Link>
 
             {/* ========== nav menu ========== */}

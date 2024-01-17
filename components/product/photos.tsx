@@ -45,10 +45,10 @@ const Photos: FC<Photos> = ({ photos }) => {
           <div className="mb-[2rem] overflow-hidden relative rounded-md">
             <div className=" border-darkPurple rounded-2xl">
               <Image
-                src={photo}
-                width={400}
-                height={400}
-                alt="expert"
+                src={`https:${photo.fields.file.url}`}
+                width={photo.fields.file.details.image.width}
+                height={photo.fields.file.details.image.height}
+                alt="image"
                 className="w-full h-96 bg-gray-200 object-cover"
               />
             </div>

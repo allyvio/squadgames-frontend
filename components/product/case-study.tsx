@@ -5,14 +5,12 @@ import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { type ProductCaseStudy } from "@/types";
 
-type CaseStudyProps = {
-  caseStudies: ProductCaseStudy[];
-};
+type TCaseStudyProps = any;
 
-const CaseStudy: FC<CaseStudyProps> = ({ caseStudies }) => {
+const CaseStudy: FC<TCaseStudyProps> = ({ data }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-      {caseStudies.map((item, i) => (
+      {data.map((item, i) => (
         <div
           key={i}
           className="bg-white rounded-2xl overflow-hidden shadow-md relative"

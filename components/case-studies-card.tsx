@@ -39,12 +39,12 @@ const CaseStudiesCard: FC<TCaseStudiesProps> = ({ data }) => {
                     key={index}
                     className="text-sm text-center py-1 px-2 border border-purple rounded "
                   >
-                    {game.fields.name}
+                    {game?.fields?.name}
                   </span>
                 ))}
               </div>
               <p className="text-lg font-semibold mb-2 min-h-[70px]">
-                Case study: {item.fields.product_name.fields.name}
+                Case study: {item.fields.product_name?.fields?.name}
               </p>
               <p className="min-h-[100px]">{item.fields.title}</p>
             </div>

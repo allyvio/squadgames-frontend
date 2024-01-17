@@ -1,45 +1,52 @@
+// @ts-nocheck
+
 import React from "react";
-import { productData } from "@/config/product";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { GiCheckMark } from "react-icons/gi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Photos from "@/components/product/photos";
-import CaseStudy from "@/components/product/case-study";
 import FaqProduct from "@/components/product/faq-product";
+import { productFaq } from "@/config/product-faq";
 import "styles/styles.css";
 import { FaUserTag } from "react-icons/fa";
 import { MdTimer } from "react-icons/md";
 import Methods from "@/components/product/methods";
+import { client } from "@/lib/contentful";
+import CaseStudiesCard from "@/components/case-studies-card";
+import Topics from "@/components/product/topics";
 
 export async function generateStaticParams() {
-  return productData.map((data) => {
-    return {
-      slug: data.contents.meta.toLowerCase().replace(" ", "-"),
-    };
-  });
+  const res = await client.getEntries({ content_type: "product" });
+  return res.items.map((item) => ({
+    params: { slug: item.fields.slug },
+  }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = productData.find(
-    (product) =>
-      product.contents.meta.toLowerCase().replace(" ", "-") === params.slug
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const products = await client.getEntries({ content_type: "product" });
+  const product = products?.items?.find(
+    (product) => product.fields.slug === params.slug
   );
 
-  if (!product) notFound();
   return {
-    title: product.contents.title,
-    description: product.contents.desc,
+    title: product?.fields?.name,
+    description: product?.fields?.description,
   };
 }
 
-const Product = ({ params }: { params: { slug: string } }) => {
-  const product = productData.find(
-    (product) =>
-      product.contents.meta.toLowerCase().replace(" ", "-") === params.slug
+const Product = async ({ params }: { params: { slug: string } }) => {
+  const data = await client.getEntries({ content_type: "product" });
+  const product = data?.items?.find(
+    (product) => product.fields.slug === params.slug
   );
   if (!product) notFound();
+
+  const faq = productFaq.find((faq) => faq.title === product.fields.name);
 
   return (
     <>
@@ -48,23 +55,27 @@ const Product = ({ params }: { params: { slug: string } }) => {
           <div className="container grid-cols-1 grid md:grid-cols-[1fr,1fr] gap-10 mb-[2rem]">
             <div className="flex flex-col">
               <h1 className="text-[2rem] leading-none md:text-[40px] font-semibold mb-5">
-                {product.contents.title}
+                {product.fields.name.toLocaleString()}
               </h1>
               <div className="flex gap-5 mb-5">
                 <div className="flex items-center gap-2">
                   <span>
                     <FaUserTag />
                   </span>
-                  <span>{product.contents.note}</span>
+                  <span>{product.fields.delivery.toLocaleString()}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>
                     <MdTimer />
                   </span>
-                  <span>{product.contents.duration}</span>
+                  <span>
+                    {product.fields.trainingDuration.toLocaleString()}
+                  </span>
                 </div>
               </div>
-              <p className="mb-5 max-w-[85%]">{product.contents.desc}</p>
+              <p className="mb-5 max-w-[85%]">
+                {product.fields.description.toLocaleString()}
+              </p>
               <div className="my-[1rem]">
                 <Link
                   href="https://wa.me/6282115570991?text=Hi%20Squadgames,%20saya%20ingin%20konsultasi%20tentang%20training"
@@ -74,16 +85,16 @@ const Product = ({ params }: { params: { slug: string } }) => {
                   <span className="text-white text-xl mr-2">
                     <IoLogoWhatsapp />
                   </span>
-                  {product.contents.action}
+                  <span>Jadwalkan Konsultasi Sekarang</span>
                 </Link>
               </div>
             </div>
             <div className="flex rounded-xl relative overflow-hidden">
               <Image
-                src={product.contents.image}
+                src={`https:${product.fields.image.fields?.file?.url}`}
+                width={product.fields.image.fields.file.details.image.width}
+                height={product.fields.image.fields.file.details.image.height}
                 alt="image"
-                width={500}
-                height={500}
                 className="w-[450px] md:w-[500px] lg:w-[600px] xl:w-[700px] lg:mt-[-3rem] mb-[3rem] object-cover"
               />
             </div>
@@ -103,17 +114,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
         </div>
 
         <div className="container pb-[1rem] flex justify-center items-center flex-wrap gap-3">
-          {product.contents.topics.map((topic, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl shadow-md md:w-[80%] lg:w-[30%] min-h-[180px]"
-            >
-              <div className="py-6 px-8 flex flex-col ">
-                <p className="text-lg font-bold mb-2">{topic.title}</p>
-                <p>{topic.desc}</p>
-              </div>
-            </div>
-          ))}
+          <Topics />
         </div>
       </section>
 
@@ -128,7 +129,7 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
       <section className="space-y-6 py-[2rem] md:py-[3rem] ">
         <div className="container">
-          <Photos photos={product.contents.gallery} />
+          <Photos photos={product.fields.photo} />
         </div>
       </section>
 
@@ -138,19 +139,15 @@ const Product = ({ params }: { params: { slug: string } }) => {
             Cerita sukses klien yang telah mempercayai Squadgames
           </h2>
           <p className="text-center text-base font-light mb-[3rem] mx-auto md:w-[70%] lg:w-[50%]">
-            Solusi: {product.contents.title}
+            Solusi: {product.fields.name.toLocaleString()}
           </p>
-          <CaseStudy caseStudies={product.caseStudy} />
+          <CaseStudiesCard data={product.fields?.caseStudy} />
         </div>
       </section>
 
       <section className="space-y-6 pt-[3rem] md:pt-[4rem] pb-[1rem] md:pb-[4rem]">
         <div className="container">
-          <FaqProduct
-            title={product.faq.title}
-            desc={product.faq.desc}
-            contents={product.faq.contents}
-          />
+          <FaqProduct title={faq.title} desc={faq.desc} qa={faq.qa} />
         </div>
       </section>
 

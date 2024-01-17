@@ -82,14 +82,15 @@ export type ProductFaqDetail = {
 };
 
 export type ProductFaq = {
+  id?: number;
   title: string;
   desc: string;
-  contents: ProductFaqDetail[];
+  qa: ProductFaqDetail[];
 };
 
 export type Product = {
   id: number;
   contents: ProductContent;
-  caseStudy: ProductCaseStudy[];
+  // caseStudy: ProductCaseStudy[];
   faq: ProductFaq;
 };

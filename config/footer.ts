@@ -19,17 +19,17 @@ export const footerData = [
     items: [
       {
         name: "Softskill training",
-        link: "/product/softskill-training",
+        link: "/product/softskills-training-with-experiential-learning-approach",
         blank: false,
       },
       {
-        name: "In venue team building",
-        link: "/product/in-venue",
+        name: "In-venue team building",
+        link: "/product/in-venue-team-building-event",
         blank: false,
       },
       {
-        name: "Team building in city",
-        link: "/product/team-building",
+        name: "Outing Specials",
+        link: "/product/outing-specials",
         blank: false,
       },
       {
@@ -44,7 +44,7 @@ export const footerData = [
       },
       {
         name: "Retirement preparation",
-        link: "/product/retirement-preparation",
+        link: "/product/retirement-preparation-program",
         blank: false,
       },
     ],

@@ -37,7 +37,7 @@ const MobileNav: FC<IMobileNavProps> = ({ items, setShowNav, showNav }) => {
                       {item.products?.map((product, index) => (
                         <Link
                           key={index}
-                          href={`product/${product.href}`}
+                          href={`/product/${product.href}`}
                           target={`${item.blank ? "_blank" : "_self"}`}
                           className="flex items-center my-0 mx-auto w-full pl-6 py-2 border-b border-[#ddd] hover:text-darkPurple2"
                           onClick={() => setShowNav(false)}

@@ -16,15 +16,15 @@ export const webNavConfig: WebNavItem[] = [
     products: [
       {
         title: "Softskill Training",
-        href: "/softskill-training",
+        href: "/softskills-training-with-experiential-learning-approach",
       },
       {
         title: "In-Venue Team Building",
-        href: "/in-venue",
+        href: "/in-venue-team-building-event",
       },
       {
         title: "Outing Specials",
-        href: "/team-building",
+        href: "/outing-specials",
       },
       {
         title: "Corporate Event",
@@ -36,7 +36,7 @@ export const webNavConfig: WebNavItem[] = [
       },
       {
         title: "Retirement Preparation",
-        href: "/retirement-preparation",
+        href: "/retirement-preparation-program",
       },
     ],
   },
@@ -65,19 +65,19 @@ export const webNavConfig: WebNavItem[] = [
 
 export const productNavConfig: ProductNavItem = {
   "Softskill Training": {
-    title: "Softskill Training",
+    title: "Softskills Training",
     desc: "Kami tidak hanya materi in-class, kami memberikan Anda untuk belajar melalui pengalaman nyata. Kami yakin, pengalaman langsung adalah cara terbaik untuk memperkuat keterampilan softskills.",
-    href: "/softskill-training",
+    href: "/softskills-training-with-experiential-learning-approach",
   },
   "In-Venue Team Building": {
-    title: "In-Venue Team Building",
+    title: "In-Venue Team Building Event",
     desc: "Kami menyelenggarakan acara di berbagai lokasi menarik di dengen venue yang menarik. Kami akan membantu Anda mengatur acara yang memukau dan berkesan.",
-    href: "/in-venue",
+    href: "/in-venue-team-building-event",
   },
   "Outing Specials": {
     title: "Outing Specials",
     desc: "Anda ingin mengadakan acara tim di kota tertentu? Tidak masalah! Kami akan membawa pengalaman pembelajaran ke kota yang Anda inginkan.",
-    href: "/team-building",
+    href: "/outing-specials",
   },
   "Corporate Event": {
     title: "Corporate Event",
@@ -92,6 +92,6 @@ export const productNavConfig: ProductNavItem = {
   "Retirement Preparation": {
     title: "Retirement Preparation",
     desc: "Kami mengerti betapa pentingnya persiapan pensiun. Kami akan membantu Anda mempersiapkan pensiun karyawan perusahaan Anda untuk memasuki masa pensiun dengan percaya diri dan kebahagiaan.",
-    href: "/retirement-preparation",
+    href: "/retirement-preparation-program",
   },
 };

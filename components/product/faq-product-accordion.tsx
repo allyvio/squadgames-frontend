@@ -57,12 +57,12 @@ const AccordionSection: FC<AccordionProps> = ({
   );
 };
 
-const FaqProductAccordion: FC<Faq> = ({ contents }) => {
+const FaqProductAccordion: FC<Faq> = ({ qa }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     <div className="flex flex-col gap-2">
-      {contents?.map((section, index) => (
+      {qa?.map((section, index) => (
         <AccordionSection
           key={index}
           section={section}

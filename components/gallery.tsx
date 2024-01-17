@@ -18,11 +18,13 @@ const Gallery: FC<TGalleryProps> = ({ galleries }) => {
               <div
                 className="photo"
                 onClick={() =>
-                  setShowPhoto(`https:${gallery.fields.image.fields.file.url}`)
+                  setShowPhoto(
+                    `https:${gallery.fields.image.fields?.file?.url}`
+                  )
                 }
               >
                 <Image
-                  src={`https:${gallery.fields.image.fields.file.url}`}
+                  src={`https:${gallery.fields.image.fields?.file?.url}`}
                   width={gallery.fields.image.fields.file.details.image.width}
                   height={gallery.fields.image.fields.file.details.image.height}
                   alt="image"

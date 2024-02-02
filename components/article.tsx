@@ -112,9 +112,11 @@ const Article: FC<TArticleProps> = ({ article }) => {
 
           {/* ===== article ===== */}
           <div className="flex flex-col md:w-[70%] mt-10">
-            <div className="h-56 md:h-96 w-full mb-10 rounded-md relative overflow-hidden">
-              <YoutubePlayer url={article.fields.video} />
-            </div>
+            {article.fields.video && (
+              <div className="h-56 md:h-96 w-full mb-10 rounded-md relative overflow-hidden">
+                <YoutubePlayer url={article.fields.video} />
+              </div>
+            )}
             <div className="flex md:w-[80%] m-auto text-center font-medium italic text-lg mb-10">
               <p>{`"${article.fields.clientTesti}"`}</p>
             </div>

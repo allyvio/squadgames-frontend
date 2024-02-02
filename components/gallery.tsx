@@ -11,7 +11,9 @@ const Gallery: FC<TGalleryProps> = ({ galleries }) => {
   return (
     <section className="py-[5rem]">
       <div className="container relative min-h-screen m-auto">
-        <h1 className="text-center text-xl">GALLERY</h1>
+        <h1 className="text-center text-2xl font-semibold mb-10">
+          Berbagai keseruan bermain bersama Squadgames
+        </h1>
         <div className="photo-container">
           {galleries?.map((gallery, index) => (
             <div key={index}>

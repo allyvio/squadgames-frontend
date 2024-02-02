@@ -43,10 +43,10 @@ const CaseStudiesCard: FC<TCaseStudiesProps> = ({ data }) => {
                   </span>
                 ))}
               </div>
-              <p className="text-lg font-semibold mb-2 min-h-[70px]">
+              <p className="text-lg font-semibold min-h-[70px]">
                 Case study: {item.fields.product_name?.fields?.name}
               </p>
-              <p className="min-h-[100px]">{item.fields.title}</p>
+              <p className="min-h-[60px]">{MaxChar(item.fields.title, 60)}</p>
             </div>
             <div className="flex text-darkPurple">
               <Link

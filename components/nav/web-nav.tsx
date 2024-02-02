@@ -41,7 +41,8 @@ const WebNav: FC<TWebNavProps> = ({ items, productNav, children }) => {
       {showInfo && (
         <div className="info">
           <p className="text-center">
-            Konsultasikan kebutuhan team building Anda dengan expertise kami!{" "}
+            Temukan solusi team building kreatif di sini, konsultasikan
+            sekarang!{" "}
             <Link href="/contact" className="btn-sm-purple">
               Lihat info
             </Link>

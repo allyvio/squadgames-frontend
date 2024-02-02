@@ -42,20 +42,20 @@ const DropdownNav: React.FC<TDropdownProps> = ({
                 >
                   <p className="text-start">{item.desc}</p>
 
-                  <div className="flex text-darkPurple pt-[1rem] border-t w-full items-center">
-                    <Link
-                      href={`/product/${item.href}`}
-                      onClick={() => setShowDropdown(false)}
-                      className="flex items-center gap-2 hover:translate-x-2 ease-in-out duration-300"
-                    >
-                      <span className="hover:underline">
-                        {`Lihat selengkapnya tentang  ${item.title}`}
-                      </span>
-                      <span className="text-lg ml-[-5px]">
-                        <HiArrowLongRight />
-                      </span>
-                    </Link>
-                  </div>
+                  {/* <div className="flex text-darkPurple pt-[1rem] border-t w-full items-center bg-pink"> */}
+                  <Link
+                    href={`/product/${item.href}`}
+                    onClick={() => setShowDropdown(false)}
+                    className="flex items-center border-t gap-2 hover:translate-x-2 ease-in-out duration-300  w-full py-5 text-darkPurple hover:underline"
+                  >
+                    <span className="">
+                      {`Lihat selengkapnya tentang  ${item.title}`}
+                    </span>
+                    <span className="text-lg ml-[-5px]">
+                      <HiArrowLongRight />
+                    </span>
+                  </Link>
+                  {/* </div> */}
                 </Tab.Panel>
               ))}
             </Tab.Panels>

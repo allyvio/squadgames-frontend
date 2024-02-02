@@ -26,7 +26,7 @@ const CaseStudies = async () => {
             <div className="flex flex-col md:w-[60%]">
               <h1 className="text-[2rem] leading-tight md:text-[40px] font-semibold mb-5">
                 Tingkatkan performa tim Anda lewat training yang menyenangkan
-                bersama Squadgames.
+                bersama Squadgames
               </h1>
               <p className="mb-5 max-w-[85%]">
                 Pelajari bagaimana bisnis terkemuka telah berhasil membawa tim

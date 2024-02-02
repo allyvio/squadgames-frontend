@@ -69,7 +69,7 @@ const WebFooter = () => {
         </div>
       </div>
       <div className="text-center text-white bg-darkPurple2 py-4">
-        &copy; Copyright 2023 PT Edukasi Talenta Indonesia.
+        &copy; Copyright 2024 PT Edukasi Talenta Indonesia.
       </div>
     </footer>
   );

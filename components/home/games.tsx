@@ -9,7 +9,7 @@ const Games = () => {
     <section className="space-y-6 py-[3rem] md:py-[5rem] bg-games-gradient">
       <div className="container flex-row justify-center items-center">
         <p className="text-center text-lg mb-2 text-white">
-          Training tapi bermain games
+          Pelatihan dengan permainan kreatif!
         </p>
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-[3rem] md:mb-[5rem] mx-auto md:max-w-[70%] text-white">
           Games yang dirancang untuk meningkatkan soliditas tim dengan aktivitas

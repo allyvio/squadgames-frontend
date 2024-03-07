@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import heroImg from "@/public/images/heroimage.png";
+import heroImg from "@/public/images/hero-image2.png";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="flex-row">
         <div className="container flex-row lg:flex items-start justify-start">
           <div className="flex flex-col">
-            <h1 className="leading-[0.9] tracking-tighter text-[4rem] md:text-[5rem] font-bold mb-5 text-white">
+            <h1 className="leading-[0.9] tracking-tight text-[4rem] md:text-[5rem] font-bold mb-5 text-white">
               <span className="text-orange">Harness Your</span> <br />{" "}
               Team&apos;s True <br /> Potential
             </h1>

@@ -54,10 +54,10 @@ const Article: FC<TArticleProps> = ({ article }) => {
               <span>{`${article.fields.trainerSatisfaction}/6`}</span>
               <p>Trainer Satisfaction</p>
             </div>
-            <div className="training-score">
+            {/* <div className="training-score">
               <span>{`${article.fields.skillEnhancement}%`}</span>
               <p>Skill Enhancement After Program</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -98,7 +98,7 @@ const Article: FC<TArticleProps> = ({ article }) => {
                 sangat puas dengan trainer kami
               </p>
             </div>
-            <div>
+            {/* <div>
               <h5>Skill Enhancement</h5>
               <p>
                 Peningkatan skill setelah mengikuti training ini adalah sebesar{" "}
@@ -107,7 +107,7 @@ const Article: FC<TArticleProps> = ({ article }) => {
                 </span>{" "}
                 yang berarti sangat tinggi
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* ===== article ===== */}

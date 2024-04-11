@@ -7,7 +7,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 const Games = () => {
   return (
     <section className="space-y-6 py-[3rem] md:py-[5rem] bg-games-gradient">
-      <div className="container flex-row justify-center items-center">
+      <div className="container flex-wrap justify-center items-center">
         <p className="text-center text-lg mb-2 text-white">
           Pelatihan dengan permainan kreatif!
         </p>
@@ -15,11 +15,11 @@ const Games = () => {
           Games yang dirancang untuk meningkatkan soliditas tim dengan aktivitas
           yang menyenangkan
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex items-center justify-center flex-wrap gap-8 ">
           {gamesData.map((game, i) => (
             <div
               key={i}
-              className="bg-white rounded-3xl overflow-hidden shadow-md relative"
+              className="bg-white rounded-3xl overflow-hidden shadow-md relative w-[400px]"
             >
               <Image
                 src={game.pic}

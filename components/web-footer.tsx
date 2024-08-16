@@ -60,10 +60,14 @@ const WebFooter = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-1">
-          <p>puti@peopleshift.id</p>
           <p>
-            Satrio Tower 6th Floor, Unit 1 Mega Kuningan, Jl. Prof. DR. Satrio
-            C4, Jakarta 12950
+            <strong>Operational office </strong>: Perum Timah Blok AA No. 54B,
+            Tugu, Cimanggis, Kota Depok, Jawa Barat, 16451
+          </p>
+          <p>
+            <strong>Head Office</strong> : Ruko Moscow Square Jl Gading Serpong
+            Boulevard No. A6, Pakulonan Barat, Kelapa Dua, Tangerang - Banten,
+            15810
           </p>
           <p>+62 812-9079-4006 (Jagad) | +62 821-1557-0991 (Puti)</p>
         </div>

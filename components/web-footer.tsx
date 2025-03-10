@@ -69,7 +69,7 @@ const WebFooter = () => {
             Boulevard No. A6, Pakulonan Barat, Kelapa Dua, Tangerang - Banten,
             15810
           </p>
-          <p>+62 812-9079-4006 (Jagad) | +62 821-1557-0991 (Puti)</p>
+          <p>+62 821-1557-0991 (Puti)</p>
         </div>
       </div>
       <div className="text-center text-white bg-darkPurple2 py-4">
